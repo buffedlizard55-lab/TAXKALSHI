@@ -70,7 +70,10 @@
     <h2>Next reads, in order</h2>
     <p>These are the gaps that block a tighter answer. They are the work for the next session, not optional polish.</p>
     <ol class="steps">
-      <li>Line-read 26 U.S.C. § 1256(g)(1) and § 1256(g)(7) from the Office of the Law Revision Counsel page, and paste the sentences into the ledger. Clear or keep the flag.</li>
+      <li>Done 24 September 2026: § 1256(g)(1) and § 1256(f)(2) line-read and pasted (F45, F46). § 1256(g)(7) is still quoted via Rev. Rul. 2007-26; read it directly when convenient.</li>
+      <li>Line-read the 2025 California Tax Table for the ten calculator rows at or below $100,000 and record the rounding difference against the Schedule X formula (F49). Consider showing both.</li>
+      <li>Add filing-status switches to the calculator only after copying Tables 1, 2, and 4 and the joint/HoH breakpoints from Rev. Proc. 2025-32 § 4.01 and § 4.03 into <code>data/calculator.json</code> and adding anchor rows for each. The federal page already carries those tables; the model does not yet.</li>
+      <li>Model losses, not just gains, in a second calculator mode: capital ($3,000 cap), section 1256 (mark-to-market), wagering (90 percent federal, itemizing; California nonconformity). Only after RTC § 17201 and Schedule CA instructions are line-read.</li>
       <li>Line-read § 1221, § 1001, § 1222, and § 1234A before calling an event contract a capital asset.</li>
       <li>Line-read RTC § 17201 and the 2025 Schedule CA instructions on wagering losses before stating a California loss percentage.</li>
       <li>Retrieve the final 2026 California individual Tax Rate Schedule from FTB when it exists. Until then, keep the 2025 PDF and the year label.</li>
@@ -82,11 +85,11 @@
     </ol>
 
     <h2>How the calculator stays honest</h2>
-    <p>The <a href="calculator.html">calculator</a> is a static, no-personal-data view over <code>data/calculator.json</code>. It uses the 2026 federal ordinary brackets and the recorded 2025 California Schedule X brackets. The amount is modeled as taxable income, not gross Kalshi proceeds. The slider changes only the preset $10,000 step; it does not ask the reader to enter a return.</p>
+    <p>The <a href="calculator.html">calculator</a> is a static, no-personal-data view over <code>data/calculator.json</code>. It uses the 2026 federal ordinary brackets, the 2026 long-term breakpoints, the § 1(h) stacking rule, and the recorded 2025 California Schedule X brackets. The amount is modeled as taxable income, not gross Kalshi proceeds. One slider drives five character scenarios so the differences can be compared; the scenarios are all marked <code>open</code> and the validator rejects one marked <code>settled</code>.</p>
     <ol class="steps">
-      <li>Re-read the IRS Revenue Procedure and FTB schedule linked on the calculator page before changing a band.</li>
-      <li>Change the JSON rate model and its record date together. Do not silently update the HTML fallback rows.</li>
-      <li>Run the validator. It checks the open final band, step size, maximum, and source IDs; it cannot prove a tax rule or a quote.</li>
+      <li>Re-read the IRS Revenue Procedure, 26 U.S.C. § 1(h), § 1256, and the FTB schedule linked on the calculator page before changing a band, a breakpoint, or a scenario.</li>
+      <li>Change the JSON rate model and its record date together. Then run <code>python3 scripts/render_calculator.py</code> to regenerate the static fallback rows. The validator fails if the page and the JSON disagree.</li>
+      <li>Run the validator. It checks the open final band, step size, maximum, source IDs, scenario shape, twelve hand-checked anchor rows, and the page/JSON match; it cannot prove a tax rule or a quote. <code>scripts/taxmodel.py</code> is the Python twin of the JavaScript arithmetic; if one changes, change the other and the anchors.</li>
       <li>Keep the California tax year visible. Do not relabel a 2025 schedule as a final 2026 schedule because a user wants a single current-looking number.</li>
     </ol>
 

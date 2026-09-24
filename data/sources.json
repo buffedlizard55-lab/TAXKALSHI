@@ -227,6 +227,14 @@
       "url": "https://www.ftb.ca.gov/forms/2026/2026-540-es-instructions.html",
       "type": "ftb",
       "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irc-1",
+      "title": "26 U.S. Code § 1 — Tax imposed (subsections (h) and (j)(5))",
+      "publisher": "Office of the Law Revision Counsel, via Cornell LII",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1",
+      "type": "statute",
+      "retrieved": "2026-09-24"
     }
   ]
 }

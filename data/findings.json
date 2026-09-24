@@ -1,0 +1,393 @@
+{
+  "record_date": "2026-09-24",
+  "scope": "U.S. citizen, California resident, ordinary filer, not subject to withholding and not in a penalty posture. Event-contract earnings on Kalshi. Not a personalized return.",
+  "findings": [
+    {
+      "id": "F01",
+      "status": "settled",
+      "topic": "taxable",
+      "claim": "Gross income includes all income from whatever source derived, unless the Code excludes it.",
+      "quote": "Except as otherwise provided in this subtitle, gross income means all income from whatever source derived, including (but not limited to) the following items:",
+      "source_id": "irc-61",
+      "why_it_matters": "No exclusion for Kalshi, event contracts, or prediction-market profit was located. Profit is taxable even if no information return is issued."
+    },
+    {
+      "id": "F02",
+      "status": "settled",
+      "topic": "taxable",
+      "claim": "Gains from dealings in property, and interest, are listed items of gross income.",
+      "quote": "(3) Gains derived from dealings in property; (4) Interest;",
+      "source_id": "irc-61",
+      "why_it_matters": "Contract profit and cash-balance interest are separate listed categories. They should not be blended."
+    },
+    {
+      "id": "F03",
+      "status": "open",
+      "topic": "character",
+      "claim": "This research pass did not locate an IRS revenue ruling, notice, or FAQ that names Kalshi or event contracts and assigns them a tax character.",
+      "quote": "Research note, not a sentence from Topic 409: the IRS pages opened in this pass, including Topic 409, do not name Kalshi or event contracts. Absence of a hit is not itself a revenue ruling.",
+      "source_id": "research-note-2026-09-24",
+      "why_it_matters": "Character — capital, section 1256, wagering, or ordinary — is the open question. The site must not collapse it. This row is a negative search result, not an IRS quotation."
+    },
+    {
+      "id": "F04",
+      "status": "settled",
+      "topic": "capital",
+      "claim": "If an asset is a capital asset, gain or loss is long-term only if held more than one year. One year or less is short-term.",
+      "quote": "Generally, if you hold the asset for more than one year before you dispose of it, your capital gain or loss is long-term. If you hold it one year or less, your capital gain or loss is short-term.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "Most event contracts resolve inside a year. If they are capital assets and not section 1256 contracts, the gain is usually short-term."
+    },
+    {
+      "id": "F05",
+      "status": "settled",
+      "topic": "capital",
+      "claim": "Net short-term capital gain is taxed as ordinary income at graduated rates.",
+      "quote": "Net short-term capital gains are subject to taxation as ordinary income at graduated tax rates.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "For a typical short holding period, short-term capital treatment and ordinary-rate treatment can produce the same federal rate. Loss rules still differ."
+    },
+    {
+      "id": "F06",
+      "status": "settled",
+      "topic": "capital",
+      "claim": "For 2025, the 0 percent long-term capital-gain ceiling is $48,350 for single and married filing separately, $96,700 for married filing jointly, and $64,750 for head of household.",
+      "quote": "A capital gains rate of 0% applies if your taxable income is less than or equal to: $48,350 for single and married filing separately; $96,700 for married filing jointly and qualifying surviving spouse; and $64,750 for head of household.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "These are 2025 figures. Do not use them for a 2026 return."
+    },
+    {
+      "id": "F07",
+      "status": "settled",
+      "topic": "capital",
+      "claim": "For 2025, the 15 percent long-term capital-gain ceiling is $533,400 single, $300,000 married filing separately, $600,050 married filing jointly, and $566,700 head of household. Above that, the rate is 20 percent.",
+      "quote": "A capital gains rate of 15% applies if your taxable income is: more than $48,350 but less than or equal to $533,400 for single; more than $48,350 but less than or equal to $300,000 for married filing separately; more than $96,700 but less than or equal to $600,050 for married filing jointly and qualifying surviving spouse; and more than $64,750 but less than or equal to $566,700 for head of household. However, a capital gains rate of 20% applies to the extent that your taxable income exceeds the thresholds set for the 15% capital gain rate.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "Preferential long-term rates are federal only, and only if the gain is long-term capital gain."
+    },
+    {
+      "id": "F08",
+      "status": "settled",
+      "topic": "capital",
+      "claim": "Excess capital loss deductible against ordinary income is limited to $3,000 ($1,500 if married filing separately), with the rest carried forward.",
+      "quote": "If your capital losses exceed your capital gains, the amount of the excess loss that you can claim to lower your income is the lesser of $3,000 ($1,500 if married filing separately) or your total net loss shown on line 16 of Schedule D (Form 1040), Capital Gains and Losses.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "This limit applies only if the loss is a capital loss. It does not apply to a wagering-loss characterization."
+    },
+    {
+      "id": "F09",
+      "status": "settled",
+      "topic": "reporting-forms",
+      "claim": "Capital transactions are generally reported on Form 8949 and summarized on Schedule D.",
+      "quote": "Report most sales and other capital transactions and calculate capital gain or loss on Form 8949, Sales and Other Dispositions of Capital Assets, then summarize capital gains and deductible capital losses on Schedule D (Form 1040).",
+      "source_id": "irs-tc409",
+      "why_it_matters": "This is the reporting path if, and only if, the contracts are capital assets and not section 1256 contracts."
+    },
+    {
+      "id": "F10",
+      "status": "settled",
+      "topic": "estimated-tax",
+      "claim": "A taxable capital gain may require estimated tax payments. This project does not compute a penalty because the stated facts exclude a penalty posture.",
+      "quote": "If you have a taxable capital gain, you may be required to make estimated tax payments.",
+      "source_id": "irs-tc409",
+      "why_it_matters": "No withholding on the Kalshi profit does not mean the tax can wait until April without a payment rule. The penalty itself is out of scope."
+    },
+    {
+      "id": "F11",
+      "status": "settled",
+      "topic": "niit",
+      "claim": "The net investment income tax is 3.8 percent of the lesser of net investment income or MAGI over $200,000 (single or head of household), $250,000 (married filing jointly), or $125,000 (married filing separately).",
+      "quote": "In the case of an individual, the NIIT is 3.8 percent on the lesser of: the net investment income, or the excess of modified adjusted gross income (MAGI) over the following threshold amounts: $250,000 for married filing jointly or qualifying surviving spouse; $125,000 for married filing separately; $200,000 for single or head of household.",
+      "source_id": "irs-tc559",
+      "why_it_matters": "Whether Kalshi profit is net investment income depends on character. Topic 559 includes net gains from disposition of property and income from trading in financial instruments or commodities. It does not name event contracts."
+    },
+    {
+      "id": "F12",
+      "status": "open",
+      "topic": "niit",
+      "claim": "Topic 559 does not say whether wagering winnings are net investment income.",
+      "quote": "In general, net investment income for purpose of this tax, includes, but isn't limited to: interest, dividends, certain annuities, royalties, and rents ... net gains from the disposition of property such as stocks, bonds, mutual funds, and real estate ... The NIIT doesn’t apply to wages, unemployment compensation, or income from an active business.",
+      "source_id": "irs-tc559",
+      "why_it_matters": "Do not add 3.8 percent automatically. Interest Kalshi pays is within the interest category if it is interest. Contract profit is not automatically NIIT."
+    },
+    {
+      "id": "F13",
+      "status": "settled",
+      "topic": "rates-2026",
+      "claim": "For tax year 2026, the single standard deduction is $16,100. Married filing jointly is $32,200. Head of household is $24,150. Married filing separately is $16,100.",
+      "quote": "For tax year 2026, the standard deduction increases to $32,200 for married couples filing jointly. For single taxpayers and married individuals filing separately, the standard deduction rises to $16,100 for tax year 2026, and for heads of households, the standard deduction will be $24,150.",
+      "source_id": "irs-ir-2025-103",
+      "why_it_matters": "Federal standard deduction is not the California standard deduction."
+    },
+    {
+      "id": "F14",
+      "status": "settled",
+      "topic": "rates-2026",
+      "claim": "2026 ordinary rate thresholds for unmarried individuals, other than surviving spouses and heads of household, are set in Revenue Procedure 2025-32, section 4.01, Table 3.",
+      "quote": "Not over $12,400 — 10% of the taxable income. Over $12,400 but not over $50,400 — $1,240 plus 12% of the excess over $12,400. Over $50,400 but not over $105,700 — $5,800 plus 22% of the excess over $50,400. Over $105,700 but not over $201,775 — $17,966 plus 24% of the excess over $105,700. Over $201,775 but not over $256,225 — $41,024 plus 32% of the excess over $201,775. Over $256,225 but not over $640,600 — $58,448 plus 35% of the excess over $256,225. Over $640,600 — $192,979.25 plus 37% of the excess over $640,600.",
+      "source_id": "irs-rp-2025-32",
+      "why_it_matters": "These brackets tax ordinary income and net short-term capital gain. They are not a California rate."
+    },
+    {
+      "id": "F15",
+      "status": "settled",
+      "topic": "rates-2026",
+      "claim": "2026 maximum zero-rate and 15 percent long-term capital-gain amounts are in Revenue Procedure 2025-32, section 4.03.",
+      "quote": "Married Individuals Filing Joint Returns and Surviving Spouse — maximum zero rate amount $98,900 — maximum 15% rate amount $613,700. Married Individuals Filing Separate Returns — $49,450 — $306,850. Heads of Household — $66,200 — $579,600. All Other Individuals — $49,450 — $545,500.",
+      "source_id": "irs-rp-2025-32",
+      "why_it_matters": "The 20 percent rate applies above the 15 percent amount. These breakpoints matter only if the gain is adjusted net capital gain."
+    },
+    {
+      "id": "F16",
+      "status": "settled",
+      "topic": "reporting-threshold",
+      "claim": "For payments made after December 31, 2025, the section 6041(a) information-reporting base threshold is $2,000.",
+      "quote": "Section 70433(a) of the OBBBA amends § 6041(a) to increase the threshold amount for reporting payments made in the course of a trade or business. ... For payments made after December 31, 2025, the base threshold under section 6041(a) is $2,000.",
+      "source_id": "irs-rp-2025-32",
+      "why_it_matters": "This is a payer reporting threshold, not a rule that income under the threshold is untaxed. It does not by itself decide whether event-contract trades are reported on Form 1099-B."
+    },
+    {
+      "id": "F17",
+      "status": "settled",
+      "topic": "section-1256",
+      "claim": "A section 1256 contract held at year-end is treated as sold for fair market value on the last business day of the year. Gain or loss is 40 percent short-term and 60 percent long-term.",
+      "quote": "each section 1256 contract held by the taxpayer at the close of the taxable year shall be treated as sold for its fair market value on the last business day of such taxable year (and any gain or loss shall be taken into account for the taxable year) ... any gain or loss with respect to a section 1256 contract shall be treated as— (A) short-term capital gain or loss, to the extent of 40 percent of such gain or loss, and (B) long-term capital gain or loss, to the extent of 60 percent of such gain or loss",
+      "source_id": "irc-1256",
+      "why_it_matters": "These consequences apply only if the contract is a section 1256 contract. They are not a default for every exchange-traded contract."
+    },
+    {
+      "id": "F18",
+      "status": "settled",
+      "topic": "section-1256",
+      "claim": "Section 1256(b)(2)(B) excludes specified swaps and similar agreements from the definition of a section 1256 contract.",
+      "quote": "The term “section 1256 contract” shall not include— (A) any securities futures contract or option on such a contract unless such contract or option is a dealer securities futures contract, or (B) any interest rate swap, currency swap, basis swap, interest rate cap, interest rate floor, commodity swap, equity swap, equity index swap, credit default swap, or similar agreement.",
+      "source_id": "irc-1256",
+      "why_it_matters": "Kalshi Klear's own filing calls event contracts swaps. Whether they are a 'similar agreement' under this tax statute is not settled by that label."
+    },
+    {
+      "id": "F19",
+      "status": "settled",
+      "topic": "section-1256",
+      "claim": "A qualified board or exchange includes a domestic board of trade designated as a contract market by the CFTC.",
+      "quote": "Section 1256(g)(7) of the Code provides that the term “qualified board or exchange” means: (A) a national securities exchange which is registered with the Securities and Exchange Commission, (B) a domestic board of trade designated as a contract market by the Commodity Futures Trading Commission, or (C) any other exchange, board of trade, or other market which the Secretary determines has rules adequate to carry out the purposes of section 1256.",
+      "source_id": "irs-rr-2007-26",
+      "why_it_matters": "DCM status is one element. It is not the whole test for a regulated futures contract."
+    },
+    {
+      "id": "F20",
+      "status": "settled",
+      "topic": "platform",
+      "claim": "The CFTC designated KalshiEX LLC as a designated contract market on November 4, 2020.",
+      "quote": "The Commodity Futures Trading Commission today announced that it has issued an Order of Designation to KalshiEX LLC, granting it status as a designated contract market (DCM). KalshiEX is a limited liability company located in San Francisco, CA and is formed under Delaware state law.",
+      "source_id": "cftc-8302-20",
+      "why_it_matters": "This supports the qualified-board element if the contract is traded on or subject to the rules of that DCM. It does not decide tax character."
+    },
+    {
+      "id": "F21",
+      "status": "settled",
+      "topic": "section-1256",
+      "claim": "On March 26, 2026, Kalshi Klear told the CFTC that the event contracts it clears are swaps, are fully collateralized at all times, and are not traded on margin.",
+      "quote": "Kalshi Klear is authorized to clear swaps and currently clears Event Contracts, which are the only class of swaps accepted for clearing by Kalshi Klear in its capacity as a DCO. Event Contracts are contracts that settle based on the occurrence or non-occurrence of a specified future event and are fully collateralized at all times.",
+      "source_id": "cftc-klear-2026-03-26",
+      "why_it_matters": "The filing calls the contracts swaps and says they are fully collateralized. Whether that CEA label is a section 1256(b)(2)(B) similar agreement is not settled. The separate sentence that they are not traded on margin is finding F43, from a later section of the same filing. Do not read the two sentences as one continuous paragraph."
+    },
+    {
+      "id": "F43",
+      "status": "settled",
+      "topic": "section-1256",
+      "claim": "In the risk-management section of the same 26 March 2026 filing, Kalshi Klear says event contracts are fully collateralized and are not traded on margin.",
+      "quote": "Event Contracts are fully collateralized and are not traded on margin.",
+      "source_id": "cftc-klear-2026-03-26",
+      "why_it_matters": "This is a separate sentence from the opening description, in section 39.5(b)(3)(vi) of the filing. It is a fact against treating retail event contracts as variation-margined futures. It is not an IRS determination that section 1256(g)(1) fails."
+    },
+    {
+      "id": "F22",
+      "status": "settled",
+      "topic": "platform",
+      "claim": "Kalshi's help center, dated June 21, 2026, lists 1099-INT, 1099-MISC, 1099-B for crypto-transfer broker proceeds, and 1099-DA from ZeroHash. It does not list a form for event-contract profit and loss.",
+      "quote": "1099-INT - contains interest payments from Kalshi. 1099-MISC - contains credit/rewards from Kalshi. 1099-B - contains transaction proceeds from broker transactions (crypto transfers). 1099-DA - contains digital asset transaction reporting from ZeroHash.",
+      "source_id": "kalshi-tax-docs",
+      "why_it_matters": "Secondary sites that say Kalshi issues a comprehensive 1099-B for event-contract trades conflict with Kalshi's own help article. Those secondary claims are rejected for this project."
+    },
+    {
+      "id": "F23",
+      "status": "settled",
+      "topic": "platform",
+      "claim": "Kalshi says its profit-and-loss statement uses FIFO, includes fees and rebates, is updated monthly, and is not tax advice.",
+      "quote": "We use the First-In-First-Out (FIFO) accounting method to compute profits and losses. Your trading activity information, segmented by year, is updated monthly. The Profit and Loss (PnL) figure includes fees and any rebates. ... This information and the information included in the Profit and Loss statement are not tax advice, and Kalshi cannot give members advice on their taxes.",
+      "source_id": "kalshi-tax-docs",
+      "why_it_matters": "The P&L is a tool. It does not choose capital, section 1256, wagering, or ordinary treatment, and FIFO on the statement is not an IRS identification method."
+    },
+    {
+      "id": "F24",
+      "status": "flag",
+      "topic": "reporting-threshold",
+      "claim": "Kalshi's August 25, 2026 help article still says incentive credits over $600 must be reported. Revenue Procedure 2025-32 says the section 6041(a) threshold for payments after December 31, 2025 is $2,000.",
+      "quote": "Incentive Credits: If you receive more than $600 in incentive credits (e.g., referral bonuses) in a calendar year, this must also be reported.",
+      "source_id": "kalshi-ssn",
+      "why_it_matters": "Do not treat Kalshi's help-center dollar figure as the statute. Also do not treat either threshold as a rule that smaller credits are untaxed. The income is still gross income under section 61."
+    },
+    {
+      "id": "F25",
+      "status": "settled",
+      "topic": "platform",
+      "claim": "Kalshi says interest of more than $10 in a year is reported to the IRS.",
+      "quote": "Interest Payments: If you earn more than $10 in interest payments annually, Kalshi is required to report this to the IRS.",
+      "source_id": "kalshi-ssn",
+      "why_it_matters": "This is Kalshi's description of its reporting practice. Interest below that figure is still income if it is interest. This pass did not determine whether any Kalshi interest is U.S. government interest exempt from California tax."
+    },
+    {
+      "id": "F26",
+      "status": "settled",
+      "topic": "wagering",
+      "claim": "IRS Topic 419 says gambling winnings are fully taxable and must be reported even if not on Form W-2G. The listed examples do not name event contracts, and the list is not exhaustive.",
+      "quote": "Gambling winnings are fully taxable and you must report the income on your tax return. Gambling income includes but isn't limited to winnings from lotteries, raffles, sports betting, horse races, and casinos. ... You must report all gambling winnings on Form 1040 or Form 1040-SR (use Schedule 1 (Form 1040)), including winnings that aren't reported on a Form W-2G.",
+      "source_id": "irs-tc419",
+      "why_it_matters": "The page can be used if the contracts are wagering. It does not decide that they are wagering. Sports-outcome contracts are the closest analogy and the highest risk of this characterization."
+    },
+    {
+      "id": "F27",
+      "status": "flag",
+      "topic": "wagering",
+      "claim": "Topic 419, as retrieved on September 24, 2026, still describes the pre-2026 loss rule and does not mention the 90 percent limit.",
+      "quote": "You may deduct gambling losses only if you itemize your deductions on Schedule A (Form 1040) and kept a record of your winnings and losses. The amount of losses you deduct can't be more than the amount of gambling income you reported on your return.",
+      "source_id": "irs-tc419",
+      "why_it_matters": "The statute, not this topic page, controls for tax years beginning after December 31, 2025. Do not use Topic 419's silence to ignore section 165(d) as amended."
+    },
+    {
+      "id": "F28",
+      "status": "settled",
+      "topic": "wagering",
+      "claim": "For federal purposes, section 165(d) allows a deduction equal to 90 percent of wagering losses, and only to the extent of wagering gains.",
+      "quote": "For purposes of losses from wagering transactions, the amount allowed as a deduction for any taxable year— (A) shall be equal to 90 percent of the amount of such losses during such taxable year, and (B) shall be allowed only to the extent of the gains from such transactions during such taxable year.",
+      "source_id": "irc-165",
+      "why_it_matters": "This rule matters only if the activity is wagering. It is harsher than capital-loss rules, and it does not let a non-itemizer deduct the losses."
+    },
+    {
+      "id": "F29",
+      "status": "settled",
+      "topic": "wagering",
+      "claim": "The Franchise Tax Board says the federal 90 percent wagering-loss change applies to taxable years beginning after December 31, 2025, and that California does not conform to it.",
+      "quote": "This provision also limits wagering losses sustained on wagering transactions to 90 percent of the amount of losses and only to the extent of the gains during the taxable year from such transactions, for taxable years beginning after December 31, 2025. California Impact: Under the PITL, California generally conforms to IRC section 165 relating to the deduction for losses as of the specified date, January 1, 2025, under block conformity pursuant to RTC section 17201, but does not conform to the clarification or limitation of the deduction made under the Tax Cuts and Jobs Act or this federal provision.",
+      "source_id": "ftb-summary",
+      "why_it_matters": "If a California resident reports the activity as wagering, federal and California loss limits are not the same. Do not copy the federal 90 percent figure onto the California return."
+    },
+    {
+      "id": "F30",
+      "status": "settled",
+      "topic": "california",
+      "claim": "California taxes a resident on the resident's entire taxable income.",
+      "quote": "There shall be imposed for each taxable year upon the entire taxable income of every resident of this state who is not a part-year resident",
+      "source_id": "rtc-17041",
+      "why_it_matters": "A California resident does not escape California tax by earning the profit on a federally regulated exchange."
+    },
+    {
+      "id": "F31",
+      "status": "settled",
+      "topic": "california",
+      "claim": "California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income.",
+      "quote": "California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income.",
+      "source_id": "ftb-cg",
+      "why_it_matters": "A federal 60/40 split, even if it applied, would not create a California preferential rate. Holding period does not change the California rate."
+    },
+    {
+      "id": "F32",
+      "status": "settled",
+      "topic": "california",
+      "claim": "If federal and California capital-gain treatment differ, California Schedule D (540) is the form FTB points to.",
+      "quote": "If you have a difference in the treatment of federal and state capital gains, file California Capital Gain or Loss Schedule D (540).",
+      "source_id": "ftb-cg",
+      "why_it_matters": "A rate difference alone is not the same as a difference in the amount of gain. Schedule D is for a difference in treatment of the gain, not for applying a lower California rate."
+    },
+    {
+      "id": "F33",
+      "status": "settled",
+      "topic": "california",
+      "claim": "California's specified IRC conformity date is January 1, 2025, under Senate Bill 711, enacted October 1, 2025.",
+      "quote": "On October 1, 2025, Senate Bill 711, the Conformity Act of 2025 was enacted. The Act changed California’s specified date of conformity to the IRC from January 1, 2015, to January 1, 2025.",
+      "source_id": "ftb-conformity",
+      "why_it_matters": "The One Big Beautiful Bill Act was enacted July 4, 2025, after the specified date. California does not automatically pick up later federal changes."
+    },
+    {
+      "id": "F34",
+      "status": "settled",
+      "topic": "california",
+      "claim": "California does not conform to federal individual rate tables. Its rates run from 1 percent to 12.3 percent, plus 1 percent on taxable income over $1,000,000.",
+      "quote": "California does not conform, under PITL, to federal individual income tax rates, and instead has its own individual income tax rates that range from 1 percent to 12.3 percent. In addition, there is an additional tax of 1 percent on the portion of a taxpayer’s taxable income that exceeds $1,000,000. Thus, the maximum personal income tax rate is 13.3 percent.",
+      "source_id": "ftb-summary",
+      "why_it_matters": "The 13.3 percent figure is 12.3 percent plus the 1 percent additional tax. It is not a flat rate on all income."
+    },
+    {
+      "id": "F35",
+      "status": "settled",
+      "topic": "california",
+      "claim": "The additional 1 percent tax applies to taxable income over $1,000,000. FTB's 2025 instructions call it the Behavioral Health Services Tax.",
+      "quote": "For each taxable year beginning on or after January 1, 2005, in addition to any other taxes imposed by this part, an additional tax shall be imposed at the rate of 1 percent on that portion of a taxpayer’s taxable income in excess of one million dollars ($1,000,000).",
+      "source_id": "rtc-17043",
+      "why_it_matters": "Credits under section 17039 do not apply to this additional tax. It is computed on taxable income over $1,000,000, not on the Kalshi profit in isolation."
+    },
+    {
+      "id": "F36",
+      "status": "settled",
+      "topic": "rates-2025-ca",
+      "claim": "The 2025 California Schedule X rates for single or married/RDP filing separately are the FTB schedules retrieved for this pass. 2026 California individual schedules were not located.",
+      "quote": "Schedule X — $0 to $11,079, 1.00%; $11,079 to $26,264, $110.79 plus 2.00% of the amount over $11,079; $26,264 to $41,452, $414.49 plus 4.00% over $26,264; $41,452 to $57,542, $1,022.01 plus 6.00% over $41,452; $57,542 to $72,724, $1,987.41 plus 8.00% over $57,542; $72,724 to $371,479, $3,201.97 plus 9.30% over $72,724; $371,479 to $445,771, $30,986.19 plus 10.30% over $371,479; $445,771 to $742,953, $38,638.27 plus 11.30% over $445,771; $742,953 and over, $72,219.84 plus 12.30% over $742,953.",
+      "source_id": "ftb-rates-2025",
+      "why_it_matters": "Do not use blog tables labeled 2026 California brackets. Use the FTB schedule for the year being filed."
+    },
+    {
+      "id": "F37",
+      "status": "settled",
+      "topic": "california",
+      "claim": "The 2025 Form 540 instructions measure California law against the Internal Revenue Code as of January 1, 2025.",
+      "quote": "References in these instructions are to the Internal Revenue Code (IRC) as of January 1, 2025, and the California Revenue and Taxation Code (R&TC).",
+      "source_id": "ftb-540-2025",
+      "why_it_matters": "A 2026 federal change is not a California change unless FTB or the Revenue and Taxation Code says California conforms."
+    },
+    {
+      "id": "F38",
+      "status": "settled",
+      "topic": "estimated-tax",
+      "claim": "FTB says a person generally does not have to make California estimated payments if withholding covers 90 percent of the required annual payment, or if the balance due is under $500 ($250 if married/RDP filing separately). Otherwise an underpayment penalty may apply.",
+      "quote": "Generally, you do not have to make estimated tax payments if the total of your California withholdings is 90% of your required annual payment. Also, you do not have to make estimated tax payments if you will pay enough through withholding to keep the amount you owe with your tax return under $500 ($250 if married/registered domestic partner (RDP) filing separately). However, if you do not pay enough tax either through withholding or by making estimated tax payments, you may have an underpayment of estimated tax penalty.",
+      "source_id": "ftb-540-booklet",
+      "why_it_matters": "The project scope assumes the person is not in a penalty posture. A person with no withholding on Kalshi profit stays in that posture only by paying another way. The penalty is not computed here."
+    },
+    {
+      "id": "F39",
+      "status": "flag",
+      "topic": "withholding",
+      "claim": "Kalshi's tax-documentation article describes information returns. It does not describe income-tax withholding on event-contract trading profits.",
+      "quote": "Users who hit certain reporting thresholds as defined by the Internal Revenue Service (IRS) will receive the following documentation from Kalshi.",
+      "source_id": "kalshi-tax-docs",
+      "why_it_matters": "Information reporting is not withholding. The scoped facts exclude backup withholding and penalty regimes. A missing TIN can create backup withholding on some reportable payments; that case is outside the stated facts."
+    },
+    {
+      "id": "F40",
+      "status": "rejected",
+      "topic": "reporting-forms",
+      "claim": "Claims that Kalshi issues a comprehensive Form 1099-B covering event-contract trades, or that event contracts automatically receive section 1256 treatment because Kalshi is a DCM, are not supported by the primary sources retrieved.",
+      "quote": "1099-B - contains transaction proceeds from broker transactions (crypto transfers).",
+      "source_id": "kalshi-tax-docs",
+      "why_it_matters": "Several secondary articles assert the opposite. They are not used as findings. They are listed on the flags page as conflicts."
+    },
+    {
+      "id": "F41",
+      "status": "flag",
+      "topic": "reporting-forms",
+      "claim": "Kalshi says that if no 1099 appears, the user likely missed an IRS issuance threshold. That sentence is about the forms Kalshi issues. It is not a rule that event-contract profit under a dollar amount is untaxed.",
+      "quote": "If no 1099 forms appear in your account, it is likely because you did not meet the IRS thresholds required for issuance.",
+      "source_id": "kalshi-tax-docs",
+      "why_it_matters": "A reader can mistake that sentence for a de minimis exclusion. Section 61 has no such exclusion. The forms listed on the same page are interest, credits, crypto-transfer proceeds, and ZeroHash digital-asset reporting."
+    },
+    {
+      "id": "F42",
+      "status": "open",
+      "topic": "california",
+      "claim": "This pass did not locate a Franchise Tax Board sentence that says California does, or does not, conform to section 1256 mark-to-market timing for a direct event-contract holder.",
+      "quote": "In general, California tax law conforms to the Internal Revenue Code (IRC) with modification. However, there are differences between California and federal tax law.",
+      "source_id": "ftb-conformity",
+      "why_it_matters": "General conformity as of January 1, 2025 is not a substitute for a line that applies section 1256 to these contracts. Do not tell a reader that California will mark the contract to market, or that it will not."
+    }
+  ]
+}

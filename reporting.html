@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forms and payment — TAXKALSHI</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="reporting">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="mast-inner">
+      <a class="brand" href="index.html">
+        <p class="brand-kicker">Forms are not the tax</p>
+        <p class="brand-title">What Kalshi says it issues, and what payment is not</p>
+        <small>Information returns, a P&amp;L worksheet, and the withholding boundary.</small>
+      </a>
+      <p class="record">Record date <strong>24 September 2026</strong></p>
+    </div>
+  </header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="index.html" data-page="summary">Summary</a>
+      <a href="engine.html" data-page="engine">Decision engine</a>
+      <a href="federal.html" data-page="federal">Federal</a>
+      <a href="california.html" data-page="california">California</a>
+      <a href="reporting.html" data-page="reporting">Forms and payment</a>
+      <a href="ledger.html" data-page="ledger">Line-by-line ledger</a>
+      <a href="flags.html" data-page="flags">Flags</a>
+      <a href="method.html" data-page="method">How to extend</a>
+    </div>
+  </nav>
+  <main id="main" class="wrap">
+    <p class="lede">Kalshi’s help center is the source for what Kalshi says it sends. The Internal Revenue Code is the source for whether the income is taxable. Those are different questions. This page keeps them apart.</p>
+
+    <h2>Documents Kalshi describes</h2>
+    <p>Article date on the page: 21 June 2026. Retrieved 24 September 2026. <a href="https://help.kalshi.com/en/articles/13823849-what-tax-documentation-does-kalshi-provide">What Tax Documentation Does Kalshi Provide?</a></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Document</th><th>Kalshi’s words</th><th>Covers event-contract P&amp;L?</th></tr></thead>
+        <tbody>
+          <tr><td>Form 1099-INT</td><td>“contains interest payments from Kalshi”</td><td>No. Interest is a separate stream.</td></tr>
+          <tr><td>Form 1099-MISC</td><td>“contains credit/rewards from Kalshi”</td><td>No. Credits and rewards are a separate stream.</td></tr>
+          <tr><td>Form 1099-B</td><td>“contains transaction proceeds from broker transactions (crypto transfers)”</td><td>No, on Kalshi’s own description. Not a comprehensive trade blotter.</td></tr>
+          <tr><td>Form 1099-DA</td><td>“contains digital asset transaction reporting from ZeroHash”</td><td>No. Digital-asset reporting from the crypto partner.</td></tr>
+          <tr><td>Profit and loss statement</td><td>FIFO, includes fees and rebates, updated monthly, “not tax advice”</td><td>It summarizes trading activity. Kalshi says it is a tool, not advice, and that the member is responsible for the return.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Where to download, in Kalshi’s steps: Account, Tax Info, select the year, download the P&amp;L. Some forms arrive by email from Zenwork. If no 1099 appears, Kalshi says the user likely missed an IRS issuance threshold. That sentence is about issuance of the forms above. It is not a rule that contract profit under a dollar amount is untaxed.</p>
+    <p>A later help article, dated 25 August 2026, gives two dollar figures Kalshi is using in that article: more than $10 of interest, and more than $600 of incentive credits. <a href="https://help.kalshi.com/en/articles/16083491-how-to-add-your-social-security-number">How to Add Your Social Security Number</a>. The $600 figure conflicts with Revenue Procedure 2025-32’s $2,000 section 6041(a) threshold for payments after 31 December 2025. Flagged. Neither figure is an exclusion from gross income.</p>
+
+    <h2>Which IRS form follows which character</h2>
+    <p>These are the forms the IRS points to for each character. Using a form does not create the character. The character has to be supportable first. The decision engine leaves character open.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>If the supported character is</th><th>Federal reporting path cited by the IRS</th><th>California note</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Capital asset, not section 1256</td>
+            <td>Form 8949, then Schedule D. Topic 409.</td>
+            <td>If the gain amount differs from federal, California Schedule D (540). The rate does not differ by holding period.</td>
+          </tr>
+          <tr>
+            <td>Section 1256</td>
+            <td>The statute’s consequences are the 60/40 split and the year-end mark. Form 6781 is the form titled for section 1256 contracts. This pass did not line-read the 2025 Form 6781 instructions, so the line numbers are not restated.</td>
+            <td>No preferential California rate on the 60 percent slice. Mark-to-market conformity for these contracts was not confirmed.</td>
+          </tr>
+          <tr>
+            <td>Wagering</td>
+            <td>Winnings on Schedule 1 (Form 1040), including winnings with no Form W-2G. Losses, if deductible, as other itemized deductions on Schedule A. Topic 419. For 2026, section 165(d) limits the deduction to 90 percent of losses and to the amount of gains.</td>
+            <td>FTB says California does not conform to that 90 percent limitation. Do not copy the federal loss figure onto the California return without a California computation.</td>
+          </tr>
+          <tr>
+            <td>Interest</td>
+            <td>Ordinary interest income. A Form 1099-INT, if issued, is matched. Amounts below the reporting threshold are still income.</td>
+            <td>Ordinary income unless a California exclusion applies. U.S. government interest treatment was not determined for Kalshi’s program.</td>
+          </tr>
+          <tr>
+            <td>Credits and rewards</td>
+            <td>Ordinary income. Form 1099-MISC if issued.</td>
+            <td>Ordinary income if included in the California tax base.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Withholding</h2>
+    <div class="callout-green callout">
+      <p>The scoped person is not subject to withholding. Kalshi’s tax-documentation article does not describe income-tax withholding on event-contract trading profits. An information return is a report. It is not tax withheld.</p>
+    </div>
+    <p>Two boundaries, so the sentence is not over-read:</p>
+    <ul class="clean">
+      <li>Backup withholding can apply to certain reportable payments if a taxpayer identification number is missing or the IRS notifies the payer. Kalshi asks for a Social Security number for identity verification and for tax reporting on credits. The stated facts exclude that backup-withholding case. This page does not explain how to arrange it.</li>
+      <li>A contest or prize is not trading profit. This pass did not use contest-rule PDFs as a source for contract earnings. Do not assume a prize rule applies to a settled contract.</li>
+    </ul>
+
+    <h2>Paying on time, without computing a penalty</h2>
+    <p>The prompt excludes penalties. The law still has payment rules. They are cited so a reader does not treat “no withholding” as “no payment until the return is filed.”</p>
+    <blockquote>
+      <p>If you have a taxable capital gain, you may be required to make estimated tax payments.</p>
+      <cite><a href="https://www.irs.gov/taxtopics/tc409">IRS Topic 409</a></cite>
+    </blockquote>
+    <blockquote>
+      <p>Generally, you do not have to make estimated tax payments if the total of your California withholdings is 90% of your required annual payment. Also, you do not have to make estimated tax payments if you will pay enough through withholding to keep the amount you owe with your tax return under $500 ($250 if married/registered domestic partner (RDP) filing separately). However, if you do not pay enough tax either through withholding or by making estimated tax payments, you may have an underpayment of estimated tax penalty.</p>
+      <cite><a href="https://www.ftb.ca.gov/forms/2025/2025-540-booklet.html">2025 Form 540 booklet, important dates</a></cite>
+    </blockquote>
+    <p>The 2025 booklet lists 2026 California estimated-payment dates as 15 April 2026, 15 June 2026, 15 September 2026, and 15 January 2027. Those dates are for 2026 estimates, printed in the 2025 booklet. Confirm the date that applies to the year being paid before relying on a calendar in a research note.</p>
+    <p>This desk stops there. It does not compute the required annual payment, the federal safe harbor, or a penalty. Those calculations need the rest of the return, which this project does not have and does not ask the reader to type in.</p>
+
+    <h2>Records worth keeping</h2>
+    <p>Kalshi says the P&amp;L is updated on the first of each month and that a mid-month look can miss the latest trades. Download the year after the January update, and keep the trade history beside it. Fees are inside Kalshi’s P&amp;L figure. Whether a fee adjusts basis or is a separate expense follows the character analysis, which is open. Do not invent a fee rule.</p>
+    <p>Topic 419’s recordkeeping paragraph — diary, receipts, tickets — applies if the activity is wagering. It is not a universal Kalshi record rule. It is the rule that applies if that character is the one used.</p>
+  </main>
+  <footer class="site"><div class="footer-inner"><p><a href="index.html">Summary</a> · <a href="flags.html">Flags</a></p></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

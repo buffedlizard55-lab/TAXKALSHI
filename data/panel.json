@@ -1,0 +1,58 @@
+{
+  "record_date": "2026-09-24",
+  "rule": "A person is a panel voice only after this project records an official state-board lookup showing an active CPA license, plus a published position that was re-read from the original page. Self-reported license numbers are not verification. Secondary articles that quote a CPA are not verification.",
+  "seats": [
+    {
+      "id": "code",
+      "name": "Code seat",
+      "kind": "primary-text",
+      "status": "active",
+      "holds": "Reads the Internal Revenue Code and the California Revenue and Taxation Code. Does not interpret silence as a holding."
+    },
+    {
+      "id": "irs",
+      "name": "IRS administrative seat",
+      "kind": "primary-text",
+      "status": "active",
+      "holds": "Reads IRS topics, revenue procedures, revenue rulings, and bulletins. Flags a topic page that lags the statute."
+    },
+    {
+      "id": "ftb",
+      "name": "California FTB seat",
+      "kind": "primary-text",
+      "status": "active",
+      "holds": "Reads Franchise Tax Board pages and forms. Does not import a federal rate or a federal loss cap unless FTB or the Revenue and Taxation Code adopts it."
+    },
+    {
+      "id": "platform",
+      "name": "Platform and CFTC seat",
+      "kind": "primary-text",
+      "status": "active",
+      "holds": "Reads Kalshi's own help center and CFTC filings. Does not treat marketing sentences as tax characterization."
+    },
+    {
+      "id": "cpa-ca-1",
+      "name": "California CPA seat 1",
+      "kind": "license-required",
+      "status": "empty",
+      "holds": "Empty. No California Board of Accountancy record was matched to a published opinion on Kalshi event contracts in the September 24, 2026 pass.",
+      "verify_at": "https://search.dca.ca.gov/"
+    },
+    {
+      "id": "cpa-ca-2",
+      "name": "California CPA seat 2",
+      "kind": "license-required",
+      "status": "empty",
+      "holds": "Empty. A second California license is required before this seat can dissent from or concur with seat 1. Two empty seats do not create a consensus.",
+      "verify_at": "https://www.dca.ca.gov/cba/consumers/license-lookup.shtml"
+    },
+    {
+      "id": "cpa-us",
+      "name": "Other U.S. CPA seat",
+      "kind": "license-required",
+      "status": "empty",
+      "holds": "Empty. A New Jersey practitioner website states a license number. That number was not confirmed on the New Jersey State Board of Accountancy portal in this pass, so the seat is not filled.",
+      "verify_at": "https://www.njconsumeraffairs.gov/accold/Pages/verification.aspx"
+    }
+  ]
+}

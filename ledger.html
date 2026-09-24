@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line-by-line ledger — TAXKALSHI</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="ledger">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="mast-inner">
+      <a class="brand" href="index.html">
+        <p class="brand-kicker">Ledger</p>
+        <p class="brand-title">Every finding, with the words it came from</p>
+        <small>Filter the record. Open the source. Do not treat a missing row as a holding.</small>
+      </a>
+      <p class="record">Record date <strong>24 September 2026</strong></p>
+    </div>
+  </header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="index.html" data-page="summary">Summary</a>
+      <a href="engine.html" data-page="engine">Decision engine</a>
+      <a href="federal.html" data-page="federal">Federal</a>
+      <a href="california.html" data-page="california">California</a>
+      <a href="reporting.html" data-page="reporting">Forms and payment</a>
+      <a href="ledger.html" data-page="ledger">Line-by-line ledger</a>
+      <a href="flags.html" data-page="flags">Flags</a>
+      <a href="method.html" data-page="method">How to extend</a>
+    </div>
+  </nav>
+  <main id="main" class="wrap">
+    <p class="lede">The ledger is <code>data/findings.json</code>. This page renders it. If the file does not load, use the summary page, which states the same conclusions in HTML.</p>
+    <p><label for="q">Search the ledger</label></p>
+    <p><input id="q" type="search" data-ledger-search placeholder="Search a claim, quote, or finding id"></p>
+    <div class="filter-row" data-status-filters aria-label="Filter by status"></div>
+    <div class="filter-row" data-topic-filters aria-label="Filter by topic"></div>
+    <p class="small muted" data-ledger-count>Loading findings…</p>
+    <div data-ledger class="grid-2"></div>
+    <noscript>
+      <p>JavaScript is off, so the filter cannot run. The findings file is <code>data/findings.json</code> in the repository. The executive answer is on the summary page and does not depend on this filter.</p>
+    </noscript>
+  </main>
+  <footer class="site"><div class="footer-inner"><p>Validator: <code>python3 scripts/validate_ledger.py</code></p></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

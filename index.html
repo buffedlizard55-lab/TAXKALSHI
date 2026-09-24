@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TAXKALSHI — How Kalshi earnings are taxed, federal and California</title>
+  <meta name="description" content="Sourced research on how Kalshi event-contract earnings are taxed for a U.S. citizen who is a California resident and is not in a withholding or penalty posture. Official links. Open questions left open.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="summary">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="mast-inner">
+      <a class="brand" href="index.html">
+        <p class="brand-kicker">Research desk · not a tax return</p>
+        <p class="brand-title">TAXKALSHI</p>
+        <small>Federal and California tax on Kalshi earnings, traced to the page that says it.</small>
+      </a>
+      <p class="record">Record date <strong>24 September 2026</strong><br>Sources re-read that day. Next pass must re-read before changing a conclusion.</p>
+    </div>
+  </header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="index.html" data-page="summary">Summary</a>
+      <a href="engine.html" data-page="engine">Decision engine</a>
+      <a href="federal.html" data-page="federal">Federal</a>
+      <a href="california.html" data-page="california">California</a>
+      <a href="reporting.html" data-page="reporting">Forms and payment</a>
+      <a href="ledger.html" data-page="ledger">Line-by-line ledger</a>
+      <a href="flags.html" data-page="flags">Flags</a>
+      <a href="method.html" data-page="method">How to extend</a>
+    </div>
+  </nav>
+  <main id="main" class="wrap">
+    <p class="lede">For a U.S. citizen who lives in California and pays tax in the ordinary way, Kalshi earnings are taxable. The IRS has not published a ruling that says what kind of income the event-contract profit is. California taxes a resident’s taxable income at ordinary rates and does not have a lower capital-gains rate.</p>
+
+    <section class="answer" aria-labelledby="answer-title">
+      <p class="chips">
+        <span class="chip chip-settled">Taxable — settled</span>
+        <span class="chip chip-open">Character — open</span>
+        <span class="chip chip-settled">California rate — settled</span>
+        <span class="chip chip-flag">60/40 claim — not established</span>
+      </p>
+      <h2 id="answer-title">Executive answer</h2>
+      <p>The person in scope is a U.S. citizen, a California resident, and an ordinary filer. The facts exclude withholding and penalties: no backup withholding, no unpaid-tax posture, and no penalty computation. The income in scope is Kalshi earnings — event-contract profit or loss, plus interest and credits the platform itself separates from that profit.</p>
+      <ol class="steps">
+        <li><strong>The profit is income.</strong> Internal Revenue Code section 61 taxes income from whatever source derived unless another section excludes it. No exclusion for this profit was located. <a href="https://www.law.cornell.edu/uscode/text/26/61">26 U.S.C. § 61</a>.</li>
+        <li><strong>No form does not mean no tax.</strong> Kalshi’s help center lists Form 1099-INT for interest, Form 1099-MISC for credits and rewards, Form 1099-B for crypto-transfer broker proceeds, and Form 1099-DA for ZeroHash digital-asset reporting. It does not list a form for event-contract profit. The same page says the profit-and-loss statement is not tax advice. <a href="https://help.kalshi.com/en/articles/13823849-what-tax-documentation-does-kalshi-provide">Kalshi tax documentation, 21 June 2026</a>.</li>
+        <li><strong>Federal character is not settled.</strong> Four candidate treatments are in the Code. None has an IRS ruling that names these contracts. Short-term capital gain and ordinary income can share a federal rate. They do not share loss rules. Section 1256’s 60/40 split is a consequence, not a label that follows from CFTC registration.</li>
+        <li><strong>California does not follow the federal capital-gain rates.</strong> The Franchise Tax Board says: “California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income.” A resident is taxed on entire taxable income. Rates run from 1 percent to 12.3 percent, plus 1 percent on taxable income over $1,000,000. <a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html">FTB capital gains</a> · <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&amp;sectionNum=17041">RTC § 17041</a> · <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&amp;sectionNum=17043">RTC § 17043</a>.</li>
+        <li><strong>Withholding is outside the facts, and it is not described for contract trading.</strong> Kalshi’s tax article describes information returns, not withholding on event-contract profits. Information reporting is not withholding. Estimated-tax rules still exist. They are noted so “no withholding” is not read as “pay nothing until April.” Penalties are not calculated.</li>
+      </ol>
+      <p class="disclaimer">This page is a research record. It is not a California CPA engagement, not an IRS determination, and not advice for a particular return. The practitioner seats in the decision engine are empty until a state board lookup is recorded.</p>
+    </section>
+
+    <nav class="toc" aria-label="On this page">
+      <a href="#streams">Income streams</a>
+      <a href="#character">The open character question</a>
+      <a href="#rates">Rates that apply once character is known</a>
+      <a href="#posture">Working posture</a>
+      <a href="#feed">Verification feed</a>
+    </nav>
+
+    <h2 id="streams">Separate the streams before choosing a character</h2>
+    <p>Kalshi’s own pages do not treat contract profit, interest, and credits as one number. Neither should a return.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Stream</th>
+            <th>What the primary source says</th>
+            <th>Federal</th>
+            <th>California</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Event-contract profit or loss</td>
+            <td>Not listed on the 1099s in Kalshi’s tax article. P&amp;L uses FIFO, includes fees and rebates, and “is not tax advice.”</td>
+            <td>Taxable under § 61. Character open. See the character table below.</td>
+            <td>If it is in California taxable income, it is taxed at ordinary California rates. No lower capital-gain rate.</td>
+          </tr>
+          <tr>
+            <td>Interest on cash</td>
+            <td>1099-INT “contains interest payments from Kalshi.” Kalshi’s 25 August 2026 page says interest of more than $10 is reported.</td>
+            <td>Interest is gross income under § 61(a)(4), including amounts below a reporting threshold.</td>
+            <td>Ordinary income unless a specific California exclusion applies. This pass did not determine whether any Kalshi interest is U.S. government interest.</td>
+          </tr>
+          <tr>
+            <td>Credits and rewards</td>
+            <td>1099-MISC “contains credit/rewards from Kalshi.” The 25 August 2026 page still says more than $600. Rev. Proc. 2025-32 says the § 6041(a) threshold for payments after 31 December 2025 is $2,000.</td>
+            <td>Taxable whether or not a form is issued. The dollar figure is a payer-reporting threshold, not an exclusion.</td>
+            <td>Ordinary income if it is in the California tax base. The threshold conflict is flagged; it does not change inclusion.</td>
+          </tr>
+          <tr>
+            <td>Crypto transfer into or out of the account</td>
+            <td>1099-B is described as crypto-transfer broker proceeds. 1099-DA is ZeroHash digital-asset reporting.</td>
+            <td>A separate disposition of property. Out of the USD-only core, and not a substitute for contract profit.</td>
+            <td>California taxes the resulting gain, if any, at ordinary rates. Computation differences belong on a California adjustment, not in this summary’s contract answer.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Sources: <a href="https://help.kalshi.com/en/articles/13823849-what-tax-documentation-does-kalshi-provide">Kalshi tax documentation</a>, <a href="https://help.kalshi.com/en/articles/16083491-how-to-add-your-social-security-number">Kalshi SSN article</a>, <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Rev. Proc. 2025-32</a>, <a href="https://www.law.cornell.edu/uscode/text/26/61">§ 61</a>.</p>
+
+    <h2 id="character">The open question: what kind of income is the contract profit?</h2>
+    <p>The decision engine does not pick a winner. It records where the Code, the IRS, the Franchise Tax Board, and Kalshi’s own filings agree, and where they do not. Empty CPA seats are not votes.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>If the profit is…</th>
+            <th>Federal result for this filer</th>
+            <th>California result</th>
+            <th>Why it is not the default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Short-term capital gain (held one year or less)</td>
+            <td>Taxed as ordinary income at the 2026 graduated rates. Losses net against capital gains, then up to $3,000 against other income ($1,500 if married filing separately), with a carryforward. Form 8949 and Schedule D, if this character is used.</td>
+            <td>Same dollars of gain, taxed at ordinary California rates. Holding period does not lower the California rate.</td>
+            <td>Topic 409 describes this path for a capital asset. No IRS page retrieved says an event contract is a capital asset. Section 1221 was not line-read in this pass. See <a href="method.html">remaining work</a>.</td>
+          </tr>
+          <tr>
+            <td>Long-term capital gain (held more than one year)</td>
+            <td>Preferential 0, 15, or 20 percent rates on adjusted net capital gain, using the 2026 breakpoints in Rev. Proc. 2025-32 § 4.03. The 3.8 percent net investment income tax may apply above the Topic 559 thresholds if the gain is net investment income.</td>
+            <td>Still ordinary California rates. The federal preference stops at the state return.</td>
+            <td>Many contracts resolve inside a year. A long holding period has to be counted, not assumed. Topic 409: count from the day after acquisition through the day of disposition.</td>
+          </tr>
+          <tr>
+            <td>Section 1256 contract</td>
+            <td>60 percent long-term and 40 percent short-term regardless of holding period. Open contracts are marked to market at year-end. IRS Form 6781 is the form titled for these contracts. Its instructions were not line-read in this pass, so line numbers are not stated.</td>
+            <td>No California preferential rate on the 60 percent slice. Whether California adopts the year-end mark for these contracts was not confirmed by an FTB sentence. Left open.</td>
+            <td>A regulated futures contract must be traded on a qualified board or exchange <em>and</em> the deposit and withdrawal amounts must depend on marking to market. KalshiEX is a DCM. Kalshi Klear told the CFTC on 26 March 2026 that these contracts are fully collateralized swaps and “are not traded on margin.” That cuts against a casual 60/40 claim. It is not an IRS ruling.</td>
+          </tr>
+          <tr>
+            <td>Ordinary income that is not capital gain and not wagering</td>
+            <td>Taxed at the same graduated rates as other ordinary income. Loss treatment is not the $3,000 capital-loss cap and is not the wagering cap. No IRS page retrieved tells a filer to use this path for event contracts.</td>
+            <td>Ordinary California rates, if the amount is in California taxable income.</td>
+            <td>This path is conservative on the federal rate for a short holding period, because short-term capital gain is already taxed at ordinary rates. It is not established. Section 1221 was not line-read, so this pass cannot say the contract fails to be a capital asset.</td>
+          </tr>
+          <tr>
+            <td>Wagering</td>
+            <td>Winnings are reported in full. For tax years beginning after 31 December 2025, the deduction is 90 percent of wagering losses, only to the extent of wagering gains, and only if the taxpayer itemizes. Topic 419, retrieved the same day, still omits the 90 percent rule. The statute controls.</td>
+            <td>FTB says California does not conform to that 90 percent limitation, or to the earlier federal clarification that other wagering expenses are inside the loss limit.</td>
+            <td>Topic 419’s list “includes but isn’t limited to” lotteries, raffles, sports betting, horse races, and casinos. It does not name event contracts. Sports-outcome contracts are the closest analogy. Non-sports contracts are a weaker analogy. Neither analogy is a holding.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>Do not blend these rows.</strong> A year cannot be section 1256 for the gains and wagering for the losses. The engine’s working posture is to report the profit, keep the streams separate, and not claim 60/40 or wagering treatment unless a later, sourced analysis of the particular contract supports it.
+    </div>
+
+    <h2 id="rates">Rates that apply once the character is known</h2>
+    <p>These tables are copied from the cited documents. They are not a bill. Tax depends on other income, filing status, deductions, and the unresolved character question. 2026 California individual brackets were not on an FTB page located in this pass. The California table is the 2025 FTB schedule.</p>
+
+    <h3>Federal ordinary rates, tax year 2026, unmarried individuals other than surviving spouses and heads of household</h3>
+    <p class="small">Revenue Procedure 2025-32, section 4.01, Table 3. Short-term capital gain is taxed at these rates. <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">PDF</a>. The same thresholds appear in <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill">IR-2025-103</a>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>If taxable income is</th><th>The tax is</th></tr></thead>
+        <tbody>
+          <tr><td>Not over $12,400</td><td>10% of taxable income</td></tr>
+          <tr><td>Over $12,400 but not over $50,400</td><td>$1,240 plus 12% of the excess over $12,400</td></tr>
+          <tr><td>Over $50,400 but not over $105,700</td><td>$5,800 plus 22% of the excess over $50,400</td></tr>
+          <tr><td>Over $105,700 but not over $201,775</td><td>$17,966 plus 24% of the excess over $105,700</td></tr>
+          <tr><td>Over $201,775 but not over $256,225</td><td>$41,024 plus 32% of the excess over $201,775</td></tr>
+          <tr><td>Over $256,225 but not over $640,600</td><td>$58,448 plus 35% of the excess over $256,225</td></tr>
+          <tr><td>Over $640,600</td><td>$192,979.25 plus 37% of the excess over $640,600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>2026 standard deduction from IR-2025-103: $16,100 single or married filing separately; $32,200 married filing jointly; $24,150 head of household. Married-filing-jointly, married-filing-separately, and head-of-household ordinary tables are on the <a href="federal.html">federal page</a>, copied from the same revenue procedure.</p>
+
+    <h3>Federal long-term capital-gain breakpoints, tax year 2026</h3>
+    <p class="small">Revenue Procedure 2025-32, section 4.03. These apply to adjusted net capital gain, not automatically to every Kalshi profit. Above the 15 percent amount, the rate is 20 percent.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Filing status</th><th>Maximum zero-rate amount</th><th>Maximum 15% amount</th></tr></thead>
+        <tbody>
+          <tr><td>Married filing jointly and surviving spouse</td><td>$98,900</td><td>$613,700</td></tr>
+          <tr><td>Married filing separately</td><td>$49,450</td><td>$306,850</td></tr>
+          <tr><td>Head of household</td><td>$66,200</td><td>$579,600</td></tr>
+          <tr><td>Single (all other individuals)</td><td>$49,450</td><td>$545,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Net investment income tax, if the income is net investment income: 3.8 percent of the lesser of net investment income or MAGI over $200,000 (single or head of household), $250,000 (married filing jointly), or $125,000 (married filing separately). <a href="https://www.irs.gov/taxtopics/tc559">Topic 559</a>. Topic 559 does not name event contracts.</p>
+
+    <h3>California rates, taxable year 2025 — use until FTB publishes the year being filed</h3>
+    <p class="small">Franchise Tax Board, <a href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf">2025 California Tax Rate Schedules</a>. Schedule X is single or married/RDP filing separately. The 1 percent additional tax on taxable income over $1,000,000 is on top of this schedule. <a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&amp;sectionNum=17043">RTC § 17043</a>. FTB’s summary of federal rate changes calls the maximum personal income tax rate 13.3 percent: the 12.3 percent top bracket plus that 1 percent. It is not a flat rate on Kalshi profit. FTB’s 2025 Form 540 instructions call the additional tax the Behavioral Health Services Tax.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>If taxable income is over</th><th>But not over</th><th>Tax</th></tr></thead>
+        <tbody>
+          <tr><td>$0</td><td>$11,079</td><td>1.00% of the amount over $0</td></tr>
+          <tr><td>$11,079</td><td>$26,264</td><td>$110.79 plus 2.00% of the amount over $11,079</td></tr>
+          <tr><td>$26,264</td><td>$41,452</td><td>$414.49 plus 4.00% of the amount over $26,264</td></tr>
+          <tr><td>$41,452</td><td>$57,542</td><td>$1,022.01 plus 6.00% of the amount over $41,452</td></tr>
+          <tr><td>$57,542</td><td>$72,724</td><td>$1,987.41 plus 8.00% of the amount over $57,542</td></tr>
+          <tr><td>$72,724</td><td>$371,479</td><td>$3,201.97 plus 9.30% of the amount over $72,724</td></tr>
+          <tr><td>$371,479</td><td>$445,771</td><td>$30,986.19 plus 10.30% of the amount over $371,479</td></tr>
+          <tr><td>$445,771</td><td>$742,953</td><td>$38,638.27 plus 11.30% of the amount over $445,771</td></tr>
+          <tr><td>$742,953</td><td>and over</td><td>$72,219.84 plus 12.30% of the amount over $742,953</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Joint and head-of-household 2025 schedules are on the <a href="california.html">California page</a>. They were copied from the same PDF. Do not substitute a 2026 blog table.</p>
+
+    <h2 id="posture">Working posture, until a ruling or a verified CPA engagement says otherwise</h2>
+    <div class="grid-2">
+      <article class="card card-settled">
+        <h3>Do this</h3>
+        <ul class="clean">
+          <li>Report contract profit even if no 1099 covers it.</li>
+          <li>Report interest and credits on their own, as ordinary income.</li>
+          <li>Keep Kalshi’s P&amp;L as a worksheet. It is not the return, and its FIFO label is not tax advice.</li>
+          <li>Apply California ordinary rates to whatever amount is in California taxable income.</li>
+          <li>If there is no withholding, read the estimated-tax rules before assuming the April payment is penalty-free. Do not compute a penalty from this site.</li>
+        </ul>
+      </article>
+      <article class="card card-flag">
+        <h3>Do not do this on the strength of a blog</h3>
+        <ul class="clean">
+          <li>Do not claim the 60/40 split because Kalshi is a designated contract market.</li>
+          <li>Do not treat a missing 1099 as a zero.</li>
+          <li>Do not put the federal long-term rate on the California return.</li>
+          <li>Do not put the federal 90 percent wagering-loss cap on the California return. FTB says California does not conform.</li>
+          <li>Do not use Topic 419’s current loss paragraph for a 2026 federal wagering year. It lags section 165(d).</li>
+        </ul>
+      </article>
+    </div>
+    <p>The critique that produced this posture is on the <a href="engine.html">decision engine</a> page. Each sentence in the ledger has a quote and a link.</p>
+
+    <h2 id="still-open">Still open after this pass</h2>
+<p>These are the limits in the way of a finished legal answer. They are the next session’s work, not footnotes to ignore. Detail and the reading order are on <a href="method.html">How to extend</a> and <a href="flags.html">Flags</a>.</p>
+<ul class="clean">
+  <li>No IRS ruling names these contracts. Character stays open on purpose.</li>
+  <li>Section 1256(g)(1) was not rendered in the direct statute fetch. Re-read it before anyone treats the mark-to-market element as a closed quote.</li>
+  <li>Section 1221, section 1001, and section 1234A were not line-read. “Capital asset” is a candidate path, not a holding.</li>
+  <li>California does not conform to the federal 90 percent wagering-loss cap. The California percentage itself was not computed. RTC section 17201 still needs a line read.</li>
+  <li>2026 California individual brackets were not on an FTB page located here. The rate table on this page is the 2025 FTB schedule.</li>
+  <li>No California Board of Accountancy record was matched to a published opinion. The CPA seats are empty. A self-reported New Jersey license number was not confirmed on that board’s portal.</li>
+  <li>A 22 September 2026 news report of a margin request was not used. The retrieved filing, dated 26 March 2026, still says event contracts are not traded on margin.</li>
+</ul>
+
+<h2 id="feed">Verification feed</h2>
+    <p class="small muted">This is the current record of what was checked. It is not a live scrape of the IRS. A later session appends a row only after re-reading the page. <a href="method.html">How to extend the feed</a>.</p>
+    <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Initial source pass.</strong> IRS topics 409, 419, and 559; Rev. Proc. 2025-32; IR-2025-103; sections 61, 1256, and 165; FTB capital-gain, conformity, and federal-change pages; 2025 California rate schedules; CFTC Release 8302-20; Kalshi Klear’s 26 March 2026 filing; Kalshi help articles dated 21 June 2026 and 25 August 2026.</p></div>
+    <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Character left open.</strong> No IRS ruling naming event contracts was located. Section 1256 was not adopted as a default.</p></div>
+    <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>California nonconformity recorded.</strong> No lower capital-gain rate. No conformity to the federal 90 percent wagering-loss cap. 2026 California individual schedules not located.</p></div>
+    <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Practitioner seats left empty.</strong> No California Board of Accountancy record was matched to a published Kalshi-tax opinion. A self-reported out-of-state license number was not confirmed on that state’s portal.</p></div>
+  </main>
+  <footer class="site">
+    <div class="footer-inner">
+      <p>TAXKALSHI is a public research desk. It does not prepare returns and it does not speak for the IRS, the Franchise Tax Board, the CFTC, or Kalshi. Read the linked page before you rely on a sentence.</p>
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

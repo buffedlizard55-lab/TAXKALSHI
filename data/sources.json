@@ -1,0 +1,224 @@
+{
+  "record_date": "2026-09-24",
+  "note": "Every source below was opened or extracted in this research pass. A quote in findings.json is copied from the page text retrieved that day. If a later pass cannot re-read the quote, the finding must be marked stale rather than repeated.",
+  "sources": [
+    {
+      "id": "irc-61",
+      "title": "26 U.S. Code § 61 — Gross income defined",
+      "publisher": "Office of the Law Revision Counsel, via Cornell LII",
+      "url": "https://www.law.cornell.edu/uscode/text/26/61",
+      "type": "statute",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irc-1256",
+      "title": "26 U.S. Code § 1256 — Section 1256 contracts marked to market",
+      "publisher": "Office of the Law Revision Counsel, via Cornell LII",
+      "url": "https://www.law.cornell.edu/uscode/text/26/1256",
+      "type": "statute",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irc-165",
+      "title": "26 U.S. Code § 165 — Losses",
+      "publisher": "Office of the Law Revision Counsel, via Cornell LII",
+      "url": "https://www.law.cornell.edu/uscode/text/26/165",
+      "type": "statute",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "rtc-17041",
+      "title": "California Revenue and Taxation Code § 17041",
+      "publisher": "California Legislative Information",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17041",
+      "type": "statute",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "rtc-17043",
+      "title": "California Revenue and Taxation Code § 17043",
+      "publisher": "California Legislative Information",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=RTC&sectionNum=17043",
+      "type": "statute",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-tc409",
+      "title": "IRS Topic No. 409, Capital gains and losses",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/taxtopics/tc409",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-tc419",
+      "title": "IRS Topic No. 419, Gambling income and losses",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/taxtopics/tc419",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-tc559",
+      "title": "IRS Topic No. 559, Net investment income tax",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/taxtopics/tc559",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-rp-2025-32",
+      "title": "Revenue Procedure 2025-32",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-ir-2025-103",
+      "title": "IR-2025-103, tax year 2026 inflation adjustments",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-rr-2007-26",
+      "title": "Revenue Ruling 2007-26 (qualified board or exchange)",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/pub/irs-drop/rr-07-26.pdf",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "irs-irb-2026-19",
+      "title": "Internal Revenue Bulletin 2026-19, REG-113229-25",
+      "publisher": "Internal Revenue Service",
+      "url": "https://www.irs.gov/irb/2026-19_IRB",
+      "type": "irs",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "fedreg-2026-04-17",
+      "title": "Federal Register, proposed regulations on information-reporting threshold and wagering losses",
+      "publisher": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/04/17/2026-07519/increase-in-threshold-for-requiring-information-reporting-with-respect-to-certain-payees-extension",
+      "type": "federal-register",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-cg",
+      "title": "FTB, Capital gains and losses",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-conformity",
+      "title": "FTB, California conformity to federal law",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/tax-pros/law/conformity.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-summary",
+      "title": "FTB, Summary of Federal Income Tax Changes",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/about-ftb/data-reports-plans/summary-of-federal-income-tax-changes/index.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-rates-2025",
+      "title": "2025 California Tax Rate Schedules",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-540-2025",
+      "title": "2025 Instructions for Form 540",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-540-instructions.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-540-booklet",
+      "title": "2025 Personal Income Tax Booklet",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2025/2025-540-booklet.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "cftc-8302-20",
+      "title": "CFTC Release 8302-20, KalshiEX LLC designated contract market",
+      "publisher": "Commodity Futures Trading Commission",
+      "url": "https://www.cftc.gov/PressRoom/PressReleases/8302-20",
+      "type": "cftc",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "cftc-klear-2026-03-26",
+      "title": "Kalshi Klear LLC, CFTC Regulation 39.5(b) submission, March 26, 2026",
+      "publisher": "Commodity Futures Trading Commission portal filing",
+      "url": "https://www.cftc.gov/media/13696/KKL%20-%2004-06-2026%20-%20Binary%20Option%20Event%20Contracts/download",
+      "type": "cftc",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "kalshi-tax-docs",
+      "title": "Kalshi Help Center, What Tax Documentation Does Kalshi Provide?",
+      "publisher": "Kalshi",
+      "url": "https://help.kalshi.com/en/articles/13823849-what-tax-documentation-does-kalshi-provide",
+      "type": "platform",
+      "retrieved": "2026-09-24",
+      "page_date": "2026-06-21"
+    },
+    {
+      "id": "kalshi-ssn",
+      "title": "Kalshi Help Center, How to Add Your Social Security Number",
+      "publisher": "Kalshi",
+      "url": "https://help.kalshi.com/en/articles/16083491-how-to-add-your-social-security-number",
+      "type": "platform",
+      "retrieved": "2026-09-24",
+      "page_date": "2026-08-25"
+    },
+    {
+      "id": "cba-lookup",
+      "title": "California Board of Accountancy license lookup",
+      "publisher": "California Department of Consumer Affairs",
+      "url": "https://www.dca.ca.gov/cba/consumers/license-lookup.shtml",
+      "type": "license-board",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "dca-search",
+      "title": "DCA license search",
+      "publisher": "California Department of Consumer Affairs",
+      "url": "https://search.dca.ca.gov/",
+      "type": "license-board",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "research-note-2026-09-24",
+      "title": "Research note for the 24 September 2026 pass — not a quotation from an agency",
+      "publisher": "TAXKALSHI research desk",
+      "url": "https://github.com/buffedlizard55-lab/TAXKALSHI",
+      "type": "research-note",
+      "retrieved": "2026-09-24"
+    },
+    {
+      "id": "nj-board",
+      "title": "New Jersey State Board of Accountancy license verification",
+      "publisher": "New Jersey Division of Consumer Affairs",
+      "url": "https://www.njconsumeraffairs.gov/accold/Pages/verification.aspx",
+      "type": "license-board",
+      "retrieved": "2026-09-24"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to extend the research — TAXKALSHI</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="method">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="mast">
+    <div class="mast-inner">
+      <a class="brand" href="index.html">
+        <p class="brand-kicker">Operating method</p>
+        <p class="brand-title">Read the prompt, then the page, then the ledger</p>
+        <small>The feed stays current only if a later pass re-reads. It does not scrape itself into a new conclusion.</small>
+      </a>
+      <p class="record">Record date <strong>24 September 2026</strong></p>
+    </div>
+  </header>
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="index.html" data-page="summary">Summary</a>
+      <a href="engine.html" data-page="engine">Decision engine</a>
+      <a href="federal.html" data-page="federal">Federal</a>
+      <a href="california.html" data-page="california">California</a>
+      <a href="reporting.html" data-page="reporting">Forms and payment</a>
+      <a href="ledger.html" data-page="ledger">Line-by-line ledger</a>
+      <a href="flags.html" data-page="flags">Flags</a>
+      <a href="method.html" data-page="method">How to extend</a>
+    </div>
+  </nav>
+  <main id="main" class="wrap">
+    <p class="lede">This desk exists so a person does not have to reconstruct the official pages from scratch. It does not exist so a script can invent the next answer. Extension is a sourced edit, checked by the validator.</p>
+
+    <h2>Before any edit</h2>
+    <ol class="steps">
+      <li>Read the standing prompt in <code>README.md</code> at the repository root before changing a conclusion. The prompt is the scope. Do not widen it into penalties, withholding planning, or a personalized return.</li>
+      <li>Re-read every source you intend to rely on. A quote already in <code>data/findings.json</code> is a lead, not a permission to repeat it after the page has changed.</li>
+      <li>If the page no longer contains the quote, mark the finding stale in the feed. Do not silently keep it.</li>
+      <li>Run <code>python3 scripts/validate_ledger.py</code>. It checks IDs, HTTPS sources, quote length, and empty CPA seats. It does not check that a quote is true. That is the re-read.</li>
+    </ol>
+
+    <h2>How to add a finding</h2>
+    <ol class="steps">
+      <li>Add the source to <code>data/sources.json</code> with publisher, HTTPS URL, and the date retrieved.</li>
+      <li>Add the finding to <code>data/findings.json</code>. Required fields: <code>id</code>, <code>status</code>, <code>topic</code>, <code>claim</code>, <code>quote</code>, <code>source_id</code>, <code>why_it_matters</code>.</li>
+      <li>The quote must be words from the page, not a paraphrase wearing quotation marks. A research note must say it is a research note.</li>
+      <li>Status is one of <code>settled</code>, <code>supported</code>, <code>open</code>, <code>flag</code>, <code>rejected</code>. Do not use <code>settled</code> for character.</li>
+      <li>Append a feed item in <code>data/feed.json</code> and a short row on the summary page if the conclusion moved.</li>
+      <li>Update the HTML page that states the conclusion. The JSON ledger and the prose must not diverge.</li>
+    </ol>
+
+    <h2>How to admit a CPA</h2>
+    <p>The prompt asks for a team of real, licensed public accountants who critique each other. The seats exist. They are empty because a name on a blog is not a license.</p>
+    <ol class="steps">
+      <li>Look up the person on the official board. California: <a href="https://search.dca.ca.gov/">search.dca.ca.gov</a>, board of accountancy. Other states: that state’s board, not a directory site.</li>
+      <li>Record license number, status, expiration, the board URL, and the date the record was seen. A screenshot path in the repo is better than a memory.</li>
+      <li>Re-read the published position from the author’s own page. Quote it. Do not quote a journalist’s paraphrase as the CPA’s words unless the journalism page is the source and is labeled as journalism.</li>
+      <li>Set the seat <code>status</code> to something other than <code>empty</code> only together with <code>license_board_url</code> and <code>license_record_date</code>. The validator rejects a filled license seat without those fields.</li>
+      <li>A single California CPA does not close a question. Seat 2 has to be filled before the panel can claim an accountant consensus. Until then, the primary-text seats control.</li>
+      <li>Do not imply the CPA reviewed this site. They did not, unless they did, in writing, and that writing is linked.</li>
+    </ol>
+
+    <h2>Next reads, in order</h2>
+    <p>These are the gaps that block a tighter answer. They are the work for the next session, not optional polish.</p>
+    <ol class="steps">
+      <li>Line-read 26 U.S.C. § 1256(g)(1) and § 1256(g)(7) from the Office of the Law Revision Counsel page, and paste the sentences into the ledger. Clear or keep the flag.</li>
+      <li>Line-read § 1221, § 1001, § 1222, and § 1234A before calling an event contract a capital asset.</li>
+      <li>Line-read RTC § 17201 and the 2025 Schedule CA instructions on wagering losses before stating a California loss percentage.</li>
+      <li>Retrieve the 2026 California individual Tax Rate Schedule from FTB when it exists. Until then, keep the 2025 PDF and the year label.</li>
+      <li>Re-read Kalshi’s tax article and the SSN article. If the $600 figure is gone, update F24. If a contract-level 1099 appears, update F22 and say so in the feed. Do not predict that it will.</li>
+      <li>Retrieve the September 2026 Kalshi Klear margin submission from the CFTC, if it is public, before changing the “not traded on margin” fact. News articles are not the filing.</li>
+      <li>Confirm or reject the New Jersey license number on the board portal before any quote from that site is used as a panel vote.</li>
+      <li>Search the IRS 2025–2026 Priority Guidance Plan and the Internal Revenue Bulletin index for “event contract,” “prediction market,” and “Kalshi.” Record the negative result as a dated search, not as a ruling that no guidance exists.</li>
+      <li>Line-read the instructions for Form 6781 before stating line numbers. Line-read Form 1099-INT instructions dated for the year at issue before restating the $10 statutory threshold. The instructions page retrieved in this pass was labeled 01/2024, so the $10 figure is quoted from Kalshi, not from that stale instructions page.</li>
+    </ol>
+
+    <h2>What not to automate</h2>
+    <p>A weekly job that fetches IRS pages and rewrites the summary would manufacture confidence. The validator and a manual link check are the automation that fits. A conclusion changes only after a person, or a later research session, re-reads the page and edits the ledger.</p>
+    <p>GitHub Pages serves this site as static files. There is no account, no calculator, and no box for a Social Security number. That is intentional. The prompt said there should be no manual input to complete the research. The reader reviews links. The reader does not feed the site a return.</p>
+
+    <h2>Limits that block a finished legal answer</h2>
+    <ul class="clean">
+      <li>The IRS has not ruled. No amount of critique invents a ruling.</li>
+      <li>This desk is not a CPA firm and cannot sign a return.</li>
+      <li>California license verification is a form on a state site. It was not completed for a named author in this pass.</li>
+      <li>Contract terms can differ by market. A sports contract and an inflation contract may not share a character. The engine says so. It does not have the rulebook exhibit for every ticker.</li>
+      <li>Tax years differ. 2025 Topic 409 breakpoints, 2026 Rev. Proc. 2025-32 brackets, and 2025 California schedules are labeled. Mixing them is an error.</li>
+    </ul>
+  </main>
+  <footer class="site"><div class="footer-inner"><p>Standing prompt: <code>README.md</code>.</p></div></footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

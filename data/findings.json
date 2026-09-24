@@ -330,10 +330,10 @@
       "id": "F36",
       "status": "settled",
       "topic": "rates-2025-ca",
-      "claim": "The 2025 California Schedule X rates for single or married/RDP filing separately are the FTB schedules retrieved for this pass. 2026 California individual schedules were not located.",
+      "claim": "The 2025 California Schedule X rates for single or married/RDP filing separately are the FTB schedules retrieved for this pass. A final 2026 California individual rate schedule was not located.",
       "quote": "Schedule X — $0 to $11,079, 1.00%; $11,079 to $26,264, $110.79 plus 2.00% of the amount over $11,079; $26,264 to $41,452, $414.49 plus 4.00% over $26,264; $41,452 to $57,542, $1,022.01 plus 6.00% over $41,452; $57,542 to $72,724, $1,987.41 plus 8.00% over $57,542; $72,724 to $371,479, $3,201.97 plus 9.30% over $72,724; $371,479 to $445,771, $30,986.19 plus 10.30% over $371,479; $445,771 to $742,953, $38,638.27 plus 11.30% over $445,771; $742,953 and over, $72,219.84 plus 12.30% over $742,953.",
       "source_id": "ftb-rates-2025",
-      "why_it_matters": "Do not use blog tables labeled 2026 California brackets. Use the FTB schedule for the year being filed."
+      "why_it_matters": "Do not use blog tables labeled final 2026 California brackets. Use the FTB schedule for the year being filed."
     },
     {
       "id": "F37",
@@ -388,6 +388,15 @@
       "quote": "In general, California tax law conforms to the Internal Revenue Code (IRC) with modification. However, there are differences between California and federal tax law.",
       "source_id": "ftb-conformity",
       "why_it_matters": "General conformity as of January 1, 2025 is not a substitute for a line that applies section 1256 to these contracts. Do not tell a reader that California will mark the contract to market, or that it will not."
+    },
+    {
+      "id": "F44",
+      "status": "settled",
+      "topic": "calculator",
+      "claim": "The 2026 California estimated-tax worksheet instructs filers to use the 2025 tax table for its tax calculation and lists a $5,706 single standard deduction for that worksheet.",
+      "quote": "Tax. Figure your tax on the amount on line 3 using the 2025 tax table for Form 540 or Form 540NR. ... If you do not plan to itemize deductions, enter the standard deduction for your filing status: $5,706 single or married/RDP filing separately",
+      "source_id": "ftb-540-es-2026",
+      "why_it_matters": "The calculator keeps its California rate schedule labeled 2025 instead of presenting a 2025 table as a final 2026 California return schedule. The 2026 FTB worksheet is evidence for the year guardrail, not a final 2026 rate schedule."
     }
   ]
 }

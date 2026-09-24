@@ -219,6 +219,14 @@
       "url": "https://www.njconsumeraffairs.gov/accold/Pages/verification.aspx",
       "type": "license-board",
       "retrieved": "2026-09-24"
+    },
+    {
+      "id": "ftb-540-es-2026",
+      "title": "2026 Instructions for Form 540-ES Estimated Tax for Individuals",
+      "publisher": "California Franchise Tax Board",
+      "url": "https://www.ftb.ca.gov/forms/2026/2026-540-es-instructions.html",
+      "type": "ftb",
+      "retrieved": "2026-09-24"
     }
   ]
 }

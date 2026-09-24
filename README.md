@@ -12,6 +12,8 @@ Read this every time work starts, so the desk keeps the same job.
 
 > Review the repo.
 >
+> Let's create a sliding tax costs for every 10 thousand dollars calculator. It should be able to tell me what the tax is on $10,000, $50,000, all the way up to $200,000.
+>
 > Let's create a project that investigates how Kalshi earnings are taxed in the US/California as a US American citizen California resident paying taxes normally not subject to any withholding or penalties. Let's focus on obtaining our information from publicly available and trusted verified sources official sources such as the IRS and certified public accountants licensed in California. We should compile enough information and should be able to expand and collect more information when needed and perform proper researching of topics.
 >
 > Let's answer the following questions and put it into a front page executive summary:
@@ -94,6 +96,7 @@ That answer is the research posture. It is not a return, not an engagement, and 
 | Path | Role |
 | --- | --- |
 | `index.html` | Executive summary |
+| `calculator.html` | $10,000-step model through $200,000; taxable-income assumptions are explicit |
 | `engine.html` | Critique rounds. CPA seats empty until verified |
 | `federal.html` | Code and IRS figures, labeled by tax year |
 | `california.html` | FTB and Revenue and Taxation Code |
@@ -101,8 +104,8 @@ That answer is the research posture. It is not a return, not an engagement, and 
 | `ledger.html` | Filterable findings |
 | `flags.html` | Conflicts and unfinished reads |
 | `method.html` | How to extend the feed |
-| `data/` | Sources, findings, feed, panel |
-| `scripts/validate_ledger.py` | Structural check, not a truth check |
+| `data/` | Sources, findings, feed, panel, calculator rate model |
+| `scripts/validate_ledger.py` | Structural check, calculator-shape check, not a truth check |
 
 ## Check
 
@@ -110,4 +113,4 @@ That answer is the research posture. It is not a return, not an engagement, and 
 python3 scripts/validate_ledger.py
 ```
 
-GitHub Pages serves the HTML from the repository root. There is no build step. There is no form for personal tax data.
+The scheduled `Check source links` workflow checks registry reachability weekly and can also be run manually. A reachable URL is not proof that its text or the law is unchanged; a research pass must still re-read and update the dated feed. The `Deploy TAXKALSHI to GitHub Pages` workflow publishes the repository root after a merge to `main`. There is no form for personal tax data.

@@ -16,13 +16,19 @@
       "date": "2026-09-24",
       "id": "R3",
       "title": "California nonconformity recorded",
-      "body": "FTB states California has no lower capital-gain rate and does not conform to the federal 90 percent wagering-loss limitation in Public Law 119-21 section 70114. 2026 California individual rate schedules were not located. 2025 FTB schedules are the rate tables used."
+      "body": "FTB states California has no lower capital-gain rate and does not conform to the federal 90 percent wagering-loss limitation in Public Law 119-21 section 70114. No final 2026 California individual rate schedule was located; the 2026 estimated-tax worksheet points to the 2025 tax table. 2025 FTB schedules are the rate tables used."
     },
     {
       "date": "2026-09-24",
       "id": "R4",
       "title": "Practitioner seats left empty",
       "body": "No California Board of Accountancy record was matched to a published Kalshi-tax opinion. New Jersey license numbers printed on a practitioner website were not confirmed on the board portal in this pass. Those seats stay empty until a board lookup is completed and the published text is re-read."
+    },
+    {
+      "date": "2026-09-24",
+      "id": "R5",
+      "title": "Calculator added with tax-year guardrails",
+      "body": "Added a 10,000-dollar step calculator through $200,000. The model uses the official 2026 federal ordinary rate schedule and the official 2025 California Schedule X. The selected amount is taxable income, not gross trading proceeds. Re-read the 2026 FTB Form 540-ES instructions: its worksheet tells filers to use the 2025 California tax table, so the California column is not labeled as a final 2026 return calculation."
     }
   ]
 }

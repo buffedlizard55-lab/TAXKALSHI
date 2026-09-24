@@ -326,3 +326,106 @@ input[type="search"] {
   margin-top: 1.5rem;
   padding-top: 0.8rem;
 }
+
+/* Calculator */
+.eyebrow {
+  margin: 0 0 0.15rem;
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.calculator-panel {
+  background: var(--green-soft);
+  border: 1px solid #b7d2c4;
+  padding: 1.15rem 1.2rem 1.25rem;
+  margin: 1.4rem 0 1.8rem;
+}
+.calculator-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.calculator-head h2 { margin-top: 0; }
+.selected-amount {
+  color: var(--green-ink);
+  font-family: var(--mono);
+  font-size: clamp(1.45rem, 4vw, 2.2rem);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.range-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 650;
+  margin: 0.8rem 0 0.2rem;
+}
+[data-amount-slider] {
+  display: block;
+  width: 100%;
+  accent-color: var(--green);
+  cursor: pointer;
+  margin: 0.8rem 0 0.1rem;
+}
+.range-scale {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.1rem;
+}
+.metric {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  padding: 0.7rem 0.75rem;
+  min-width: 0;
+}
+.metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.metric strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  margin-top: 0.15rem;
+}
+.metric-total { border-color: var(--green); }
+.metric-total strong { color: var(--green-ink); }
+.calculator-table tr.is-selected td,
+.calculator-table tr.is-selected th {
+  background: var(--green-soft);
+  box-shadow: inset 0 2px 0 var(--green), inset 0 -2px 0 var(--green);
+}
+.calculator-table td, .calculator-table th { white-space: nowrap; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 760px) {
+  .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .calculator-head { align-items: flex-start; flex-direction: column; gap: 0.2rem; }
+  .range-label { display: block; }
+  .range-label span { display: block; font-family: var(--mono); font-size: 0.9rem; margin-top: 0.15rem; }
+  .metric-grid { grid-template-columns: 1fr; }
+}

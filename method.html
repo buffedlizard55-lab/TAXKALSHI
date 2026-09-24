@@ -25,6 +25,7 @@
   <nav class="nav" aria-label="Primary">
     <div class="nav-inner">
       <a href="index.html" data-page="summary">Summary</a>
+      <a href="calculator.html" data-page="calculator">Calculator</a>
       <a href="engine.html" data-page="engine">Decision engine</a>
       <a href="federal.html" data-page="federal">Federal</a>
       <a href="california.html" data-page="california">California</a>
@@ -72,7 +73,7 @@
       <li>Line-read 26 U.S.C. § 1256(g)(1) and § 1256(g)(7) from the Office of the Law Revision Counsel page, and paste the sentences into the ledger. Clear or keep the flag.</li>
       <li>Line-read § 1221, § 1001, § 1222, and § 1234A before calling an event contract a capital asset.</li>
       <li>Line-read RTC § 17201 and the 2025 Schedule CA instructions on wagering losses before stating a California loss percentage.</li>
-      <li>Retrieve the 2026 California individual Tax Rate Schedule from FTB when it exists. Until then, keep the 2025 PDF and the year label.</li>
+      <li>Retrieve the final 2026 California individual Tax Rate Schedule from FTB when it exists. Until then, keep the 2025 PDF and the year label.</li>
       <li>Re-read Kalshi’s tax article and the SSN article. If the $600 figure is gone, update F24. If a contract-level 1099 appears, update F22 and say so in the feed. Do not predict that it will.</li>
       <li>Retrieve the September 2026 Kalshi Klear margin submission from the CFTC, if it is public, before changing the “not traded on margin” fact. News articles are not the filing.</li>
       <li>Confirm or reject the New Jersey license number on the board portal before any quote from that site is used as a panel vote.</li>
@@ -80,9 +81,18 @@
       <li>Line-read the instructions for Form 6781 before stating line numbers. Line-read Form 1099-INT instructions dated for the year at issue before restating the $10 statutory threshold. The instructions page retrieved in this pass was labeled 01/2024, so the $10 figure is quoted from Kalshi, not from that stale instructions page.</li>
     </ol>
 
+    <h2>How the calculator stays honest</h2>
+    <p>The <a href="calculator.html">calculator</a> is a static, no-personal-data view over <code>data/calculator.json</code>. It uses the 2026 federal ordinary brackets and the recorded 2025 California Schedule X brackets. The amount is modeled as taxable income, not gross Kalshi proceeds. The slider changes only the preset $10,000 step; it does not ask the reader to enter a return.</p>
+    <ol class="steps">
+      <li>Re-read the IRS Revenue Procedure and FTB schedule linked on the calculator page before changing a band.</li>
+      <li>Change the JSON rate model and its record date together. Do not silently update the HTML fallback rows.</li>
+      <li>Run the validator. It checks the open final band, step size, maximum, and source IDs; it cannot prove a tax rule or a quote.</li>
+      <li>Keep the California tax year visible. Do not relabel a 2025 schedule as a final 2026 schedule because a user wants a single current-looking number.</li>
+    </ol>
+
     <h2>What not to automate</h2>
     <p>A weekly job that fetches IRS pages and rewrites the summary would manufacture confidence. The validator and a manual link check are the automation that fits. A conclusion changes only after a person, or a later research session, re-reads the page and edits the ledger.</p>
-    <p>GitHub Pages serves this site as static files. There is no account, no calculator, and no box for a Social Security number. That is intentional. The prompt said there should be no manual input to complete the research. The reader reviews links. The reader does not feed the site a return.</p>
+    <p>GitHub Pages serves this site as static files. There is no account and no box for a Social Security number. That is intentional. The prompt said there should be no manual input to complete the research. The reader reviews links and may move a public slider; the reader does not feed the site a return.</p>
 
     <h2>Limits that block a finished legal answer</h2>
     <ul class="clean">

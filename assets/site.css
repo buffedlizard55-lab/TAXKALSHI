@@ -429,3 +429,52 @@ input[type="search"] {
   .range-label span { display: block; font-family: var(--mono); font-size: 0.9rem; margin-top: 0.15rem; }
   .metric-grid { grid-template-columns: 1fr; }
 }
+
+/* Character-comparison calculator */
+.step-buttons { display: flex; gap: 0.5rem; margin-top: 0.6rem; }
+.step-buttons button,
+.view-switch button {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  cursor: pointer;
+  border-radius: 4px;
+}
+.step-buttons button:hover, .view-switch button:hover { border-color: var(--green); }
+.view-switch { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0 0.8rem; }
+.view-switch button[aria-pressed="true"] { background: var(--green-soft); border-color: var(--green); color: var(--green-ink); font-weight: 650; }
+.scenario-spread {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.9rem;
+  background: var(--card);
+  border-left: 4px solid var(--amber);
+  border-radius: 2px;
+}
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.8rem;
+  margin: 1.1rem 0 0.4rem;
+}
+.scenario-card { display: flex; flex-direction: column; min-width: 0; }
+.scenario-card h3 { font-size: 1.05rem; margin: 0.1rem 0 0.6rem; }
+.scenario-card.is-baseline { border-width: 2px; }
+.scenario-figures { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem 0.7rem; }
+.scenario-figures div { min-width: 0; }
+.scenario-figures dt { color: var(--muted); font-size: 0.76rem; }
+.scenario-figures dd { margin: 0.05rem 0 0; font-family: var(--mono); font-size: 0.98rem; }
+.scenario-figures .scenario-combined { grid-column: 1 / -1; padding: 0.35rem 0.5rem; background: rgba(255,255,255,0.65); border: 1px solid var(--rule); }
+.scenario-figures .scenario-combined dd { font-size: 1.25rem; font-weight: 600; color: var(--green-ink); }
+.scenario-diff { margin: 0.7rem 0 0.2rem; font-family: var(--mono); font-size: 0.86rem; font-weight: 600; }
+.scenario-diff.is-lower { color: var(--green-ink); }
+.scenario-diff.is-higher { color: var(--red); }
+.scenario-diff.is-same { color: var(--muted); }
+.scenario-card > .small { margin-top: auto; padding-top: 0.5rem; }
+.calculator-table tbody tr { cursor: pointer; }
+.scenario-table td { vertical-align: top; }
+@media (max-width: 480px) {
+  .scenario-figures { grid-template-columns: 1fr; }
+}

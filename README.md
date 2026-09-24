@@ -14,6 +14,10 @@ Read this every time work starts, so the desk keeps the same job.
 >
 > Let's create a sliding tax costs for every 10 thousand dollars calculator. It should be able to tell me what the tax is on $10,000, $50,000, all the way up to $200,000.
 >
+> It should answer the question for this The open question: what kind of income is the contract profit?
+>
+> We should create sliding tax costs for every 10 thousand dollars calculator. It should be able to tell me what the tax is on $10,000, 50,000, all the way up to 200,000. It should be to answer every question and show the difference. It should move as one to easily compare the differences in taxes.
+>
 > Let's create a project that investigates how Kalshi earnings are taxed in the US/California as a US American citizen California resident paying taxes normally not subject to any withholding or penalties. Let's focus on obtaining our information from publicly available and trusted verified sources official sources such as the IRS and certified public accountants licensed in California. We should compile enough information and should be able to expand and collect more information when needed and perform proper researching of topics.
 >
 > Let's answer the following questions and put it into a front page executive summary:
@@ -79,6 +83,8 @@ Own the outcome means the page, the ledger, the flags, and the validator travel 
 3. Do not add a finding without a quote, a source id, and a why-it-matters line.
 4. Do not fill a CPA seat without `license_board_url` and `license_record_date`. The validator rejects a filled license seat that lacks them.
 5. Do not state a 2026 California bracket until the Franchise Tax Board publishes the schedule.
+5a. Do not mark a calculator scenario `settled`. The calculator compares characters; it does not decide one. The validator enforces this.
+5b. After editing `data/calculator.json`, run `python3 scripts/render_calculator.py` so the static rows in `calculator.html` match, then run the validator. `scripts/taxmodel.py` and `assets/site.js` must stay arithmetically identical; the anchor rows in the validator are the tripwire.
 6. Do not compute penalties or design withholding. The scope excludes both.
 7. Do not treat a missing 1099 as nontaxable income.
 8. Run `python3 scripts/validate_ledger.py` before committing a ledger change.
@@ -89,6 +95,8 @@ Own the outcome means the page, the ledger, the flags, and the validator travel 
 
 For the scoped person, Kalshi earnings are taxable. Event-contract character is not settled by any IRS ruling located on 24 September 2026. California taxes a resident’s taxable income at ordinary rates and has no lower capital-gains rate. Withholding on contract trading is not described in Kalshi’s tax article. Penalties are out of scope.
 
+Because the character question is open, the calculator answers it the only way the record allows: it computes the same $10,000 step under every candidate character at once — ordinary, short-term capital, section 1256 (60/40), long-term capital, wagering — and shows the difference. At $50,000 of modeled taxable income the federal figure is $5,752.00 / $5,752.00 / $2,234.50 / $82.50 / $5,752.00; at $200,000 it is $40,598.00 / $40,598.00 / $30,312.00 / $22,582.50 / $40,598.00. California is the same in every scenario ($1,534.89 and $15,038.64). The lower rows are not established for these contracts.
+
 That answer is the research posture. It is not a return, not an engagement, and not a ruling.
 
 ## Layout
@@ -96,7 +104,7 @@ That answer is the research posture. It is not a return, not an engagement, and 
 | Path | Role |
 | --- | --- |
 | `index.html` | Executive summary |
-| `calculator.html` | $10,000-step model through $200,000; taxable-income assumptions are explicit |
+| `calculator.html` | $10,000-step model through $200,000 under five candidate characters from one slider; taxable-income assumptions are explicit; static fallback rows are generated |
 | `engine.html` | Critique rounds. CPA seats empty until verified |
 | `federal.html` | Code and IRS figures, labeled by tax year |
 | `california.html` | FTB and Revenue and Taxation Code |
@@ -105,12 +113,34 @@ That answer is the research posture. It is not a return, not an engagement, and 
 | `flags.html` | Conflicts and unfinished reads |
 | `method.html` | How to extend the feed |
 | `data/` | Sources, findings, feed, panel, calculator rate model |
-| `scripts/validate_ledger.py` | Structural check, calculator-shape check, not a truth check |
+| `scripts/validate_ledger.py` | Structural check, calculator-shape check, twelve anchor rows, page/JSON match; not a truth check |
+| `scripts/taxmodel.py` | Python twin of the JavaScript rate arithmetic (§ 1(h) stacking included) |
+| `scripts/render_calculator.py` | Regenerates the static fallback table in `calculator.html` from the JSON model |
 
 ## Check
 
 ```bash
+python3 scripts/render_calculator.py   # after any change to data/calculator.json
 python3 scripts/validate_ledger.py
 ```
 
 The scheduled `Check source links` workflow checks registry reachability weekly and can also be run manually. A reachable URL is not proof that its text or the law is unchanged; a research pass must still re-read and update the dated feed. The `Deploy TAXKALSHI to GitHub Pages` workflow publishes the repository root after a merge to `main`. There is no form for personal tax data.
+
+## Session log
+
+### 24 September 2026 — character comparison
+
+Done: five-scenario calculator from one slider; § 1(h)/§ 1(j)(5) stacking rule quoted and implemented; § 1256(g)(1) and (f)(2) line-read (earlier flag cleared); FTB Schedule X, Rev. Proc. 2025-32, Kalshi tax article, Topic 419 re-read (no change); dated negative irs.gov search recorded; Python reference model, renderer, and page/JSON match check added; findings F45–F50; feed R6–R7.
+
+Next session, in order:
+
+1. Line-read the 2025 California Tax Table for the ten rows at or below $100,000 and record the difference from the Schedule X formula (F49).
+2. Add filing-status switches (MFJ, MFS, HoH) only after copying Rev. Proc. 2025-32 Tables 1, 2, 4 and the § 4.03 breakpoints into the JSON and adding anchor rows for each.
+3. Line-read § 1221, § 1001, § 1222, § 1234A before calling an event contract a capital asset.
+4. Line-read RTC § 17201 and 2025 Schedule CA instructions, then design a loss mode for the calculator (capital cap, § 1256 mark, wagering 90 percent federal / California nonconformity).
+5. Retrieve the September 2026 Kalshi Klear margin submission from the CFTC, if public. The 26 March 2026 filing still controls the “not traded on margin” fact.
+6. Complete a state-board lookup before filling any CPA seat. The board portals are interactive forms; this sandbox could not complete one.
+7. Check FTB for a final 2026 individual rate schedule; the 2026 URL pattern returned a 404 on 24 September 2026.
+
+Limitations in the way of a finished answer: the IRS has not ruled; the desk is not a CPA firm; the board lookups are interactive forms that could not be completed from this environment; the calculator models gains, not losses; California figures are the 2025 schedule.
+

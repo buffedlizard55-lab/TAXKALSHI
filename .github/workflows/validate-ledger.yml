@@ -4,7 +4,9 @@ on:
   push:
     paths:
       - "data/**"
-      - "scripts/validate_ledger.py"
+      - "scripts/**"
+      - "calculator.html"
+      - "assets/site.js"
       - ".github/workflows/validate-ledger.yml"
   pull_request:
   workflow_dispatch:
@@ -14,5 +16,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check findings, sources, and empty CPA seats
+      - name: Check findings, sources, empty CPA seats, calculator anchors, and page/JSON match
         run: python3 scripts/validate_ledger.py

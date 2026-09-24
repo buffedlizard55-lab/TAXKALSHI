@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the research ledger for missing sources, empty quotes, and duplicate IDs.
+"""Check the research ledger, the calculator model, and the calculator page for internal consistency.
 
 This does not prove a quote is accurate. It proves the ledger is internally complete
 so a later pass can re-read each URL instead of inventing a citation.
@@ -110,31 +110,99 @@ def main() -> int:
         if bands[-1].get("up_to") is not None:
             errors.append(f"calculator {label} must end with an open band")
 
-    def tax_at(amount: float, bands: list[dict]) -> float:
-        for band in bands:
-            if band.get("up_to") is None or amount <= band["up_to"]:
-                return band["base"] + (amount - band["from"]) * band["rate"]
-        return 0.0
+    # Shared reference arithmetic (scripts/taxmodel.py mirrors assets/site.js).
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from taxmodel import compute, render_rows  # noqa: E402
 
-    # These are the user-visible anchor rows. They make a bracket edit fail loudly
+    scenarios = calculator.get("scenarios", [])
+    if not scenarios:
+        errors.append("calculator has no scenarios; the character comparison is the point of the page")
+    if sum(1 for s in scenarios if s.get("baseline")) != 1:
+        errors.append("calculator must have exactly one baseline scenario")
+    scenario_ids = [s.get("id") for s in scenarios]
+    if len(scenario_ids) != len(set(scenario_ids)):
+        errors.append("duplicate scenario id")
+    for scenario in scenarios:
+        sid = scenario.get("id")
+        for key in ("label", "short", "federal_method", "long_term_share", "federal_note",
+                    "california_note", "loss_rule", "forms", "evidence", "status", "findings"):
+            if key not in scenario or scenario[key] in ("", None):
+                errors.append(f"scenario {sid} missing {key}")
+        if scenario.get("federal_method") not in ("ordinary", "stacked"):
+            errors.append(f"scenario {sid} has unknown federal_method")
+        share = scenario.get("long_term_share")
+        if not isinstance(share, (int, float)) or not 0 <= share <= 1:
+            errors.append(f"scenario {sid} long_term_share must be between 0 and 1")
+        if scenario.get("status") == "settled":
+            errors.append(f"scenario {sid} is marked settled; character is open by rule")
+        for fid in scenario.get("findings", []):
+            if fid not in seen:
+                errors.append(f"scenario {sid} cites unknown finding {fid}")
+
+    breaks = calculator.get("long_term_breakpoints_2026", {})
+    for key in ("maximum_zero_rate_amount", "maximum_15_percent_rate_amount", "rate_above_15_percent_amount"):
+        if not isinstance(breaks.get(key), (int, float)):
+            errors.append(f"calculator long_term_breakpoints_2026 missing {key}")
+
+    # User-visible anchor rows. They make a bracket or breakpoint edit fail loudly
     # instead of silently changing the requested $10k, $50k, or $200k answers.
-    for amount, expected in {
-        10000: (1000.00, 100.00, 1100.00),
-        50000: (5752.00, 1534.89, 7286.89),
-        200000: (40598.00, 15038.64, 55636.64),
-    }.items():
-        try:
-            actual = (
-                tax_at(amount, calculator.get("federal_bands", [])),
-                tax_at(amount, calculator.get("california_bands", [])),
-            )
-        except (KeyError, TypeError):
-            errors.append(f"calculator anchor row ${amount:,} could not be calculated")
+    # Expected values were hand-checked against Rev. Proc. 2025-32 Table 3 and
+    # section 4.03, 26 U.S.C. section 1(h), and FTB 2025 Schedule X.
+    anchors = {
+        ("ordinary", 10000): (1000.00, 100.00),
+        ("ordinary", 50000): (5752.00, 1534.89),
+        ("ordinary", 200000): (40598.00, 15038.64),
+        ("short_term", 200000): (40598.00, 15038.64),
+        ("wagering", 200000): (40598.00, 15038.64),
+        ("section_1256", 10000): (400.00, 100.00),
+        ("section_1256", 50000): (2234.50, 1534.89),
+        ("section_1256", 130000): (17852.00, 8528.64),
+        ("section_1256", 200000): (30312.00, 15038.64),
+        ("long_term", 10000): (0.00, 100.00),
+        ("long_term", 50000): (82.50, 1534.89),
+        ("long_term", 200000): (22582.50, 15038.64),
+    }
+    by_scenario = {s.get("id"): s for s in scenarios}
+    for (sid, amount), expected in anchors.items():
+        scenario = by_scenario.get(sid)
+        if not scenario:
+            errors.append(f"calculator anchor scenario {sid} is missing")
             continue
-        if any(round(value, 2) != expected[index] for index, value in enumerate(actual)):
-            errors.append(f"calculator anchor row ${amount:,} changed: got {actual}")
-        if round(sum(actual), 2) != expected[2]:
-            errors.append(f"calculator combined anchor row ${amount:,} changed")
+        try:
+            result = compute(calculator, scenario, amount)
+        except (KeyError, TypeError, ValueError) as exc:
+            errors.append(f"calculator anchor {sid} ${amount:,} could not be calculated: {exc}")
+            continue
+        actual = (round(result["federal"], 2), round(result["california"], 2))
+        if actual != expected:
+            errors.append(f"calculator anchor {sid} ${amount:,} changed: got {actual}, expected {expected}")
+
+    # Headline dollars quoted in prose must still match the model. This cannot
+    # find every stale sentence, but it makes the summary and README fail loudly
+    # when a bracket edit changes the numbers they quote.
+    headline = [("ordinary", 50000), ("section_1256", 50000), ("long_term", 50000),
+                ("ordinary", 200000), ("section_1256", 200000), ("long_term", 200000)]
+    prose_pages = {name: (ROOT / name).read_text(encoding="utf-8") for name in ("index.html", "README.md")}
+    for sid, amount in headline:
+        scenario = by_scenario.get(sid)
+        if not scenario:
+            continue
+        result = compute(calculator, scenario, amount)
+        for label, value in (("federal", result["federal"]), ("california", result["california"])):
+            text = "${:,.2f}".format(round(value + 1e-9, 2))
+            for name, body in prose_pages.items():
+                if text not in body:
+                    errors.append(f"{name} no longer quotes {sid} {label} at ${amount:,} = {text}")
+
+    # The static fallback table in calculator.html must equal the JSON model.
+    page = (ROOT / "calculator.html").read_text(encoding="utf-8")
+    start, end = "<!-- calculator-rows:start -->", "<!-- calculator-rows:end -->"
+    if start in page and end in page:
+        static_rows = page.split(start, 1)[1].split(end, 1)[0].strip()
+        if scenarios and static_rows != render_rows(calculator, "combined").strip():
+            errors.append("calculator.html fallback rows differ from data/calculator.json; run scripts/render_calculator.py")
+    else:
+        errors.append("calculator.html is missing the fallback-row markers")
 
     if errors:
         print("LEDGER FAILED")
@@ -142,7 +210,7 @@ def main() -> int:
             print("- " + error)
         return 1
 
-    print(f"LEDGER OK: {len(seen)} findings, {len(by_id)} sources, {len(feed['items'])} feed items")
+    print(f"LEDGER OK: {len(seen)} findings, {len(by_id)} sources, {len(feed['items'])} feed items, {len(scenarios)} calculator scenarios")
     print("CPA license seats filled:", len(filled))
     return 0
 

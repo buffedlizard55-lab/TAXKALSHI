@@ -59,7 +59,7 @@
     </section>
 
     <div class="callout callout-green">
-      <strong>Need a quick number?</strong> The <a href="calculator.html">10,000-dollar step calculator</a> shows modeled federal and California tax from $10,000 through $200,000. It is deliberately labeled taxable income, not a return bill.
+      <strong>What the open question is worth, in dollars.</strong> The <a href="calculator.html">10,000-dollar step calculator</a> computes the same amount under every candidate character at once, from $10,000 through $200,000, so the difference can be read instead of argued. At $50,000 of modeled taxable income the federal figure is $5,752.00 if the profit is ordinary, short-term capital, or wagering; $2,234.50 if it were a section 1256 contract; $82.50 if it were long-term capital gain. At $200,000: $40,598.00 versus $30,312.00 versus $22,582.50. California is $1,534.89 and $15,038.64 respectively in every scenario. The lower rows are not established for these contracts. Amounts are modeled taxable income, not a return bill.
     </div>
 
     <nav class="toc" aria-label="On this page">
@@ -114,7 +114,20 @@
     <p class="small muted">Sources: <a href="https://help.kalshi.com/en/articles/13823849-what-tax-documentation-does-kalshi-provide">Kalshi tax documentation</a>, <a href="https://help.kalshi.com/en/articles/16083491-how-to-add-your-social-security-number">Kalshi SSN article</a>, <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Rev. Proc. 2025-32</a>, <a href="https://www.law.cornell.edu/uscode/text/26/61">§ 61</a>.</p>
 
     <h2 id="character">The open question: what kind of income is the contract profit?</h2>
-    <p>The decision engine does not pick a winner. It records where the Code, the IRS, the Franchise Tax Board, and Kalshi’s own filings agree, and where they do not. Empty CPA seats are not votes.</p>
+    <p>The decision engine does not pick a winner. It records where the Code, the IRS, the Franchise Tax Board, and Kalshi’s own filings agree, and where they do not. Empty CPA seats are not votes. A dated site search of irs.gov on 24 September 2026 for “event contracts” and “prediction market” again returned nothing on point (<a href="ledger.html#F50">F50</a>). The <a href="calculator.html">calculator</a> now answers the question the only way the record allows: by showing what each answer costs at every $10,000 step.</p>
+    <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Modeled federal tax at three amounts under each candidate character, tax year 2026, single</caption>
+        <thead><tr><th scope="col">Modeled taxable income</th><th scope="col">Ordinary / short-term / wagering</th><th scope="col">Section 1256 (60/40)</th><th scope="col">Long-term capital</th><th scope="col">California, all scenarios (2025 Schedule X)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">$10,000</th><td>$1,000.00</td><td>$400.00</td><td>$0.00</td><td>$100.00</td></tr>
+          <tr><th scope="row">$50,000</th><td>$5,752.00</td><td>$2,234.50</td><td>$82.50</td><td>$1,534.89</td></tr>
+          <tr><th scope="row">$100,000</th><td>$16,712.00</td><td>$12,134.50</td><td>$7,582.50</td><td>$5,738.64</td></tr>
+          <tr><th scope="row">$200,000</th><td>$40,598.00</td><td>$30,312.00</td><td>$22,582.50</td><td>$15,038.64</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">Federal: Rev. Proc. 2025-32 § 4.01 Table 3 and § 4.03, stacked under 26 U.S.C. § 1(h) and § 1(j)(5). California: FTB 2025 Schedule X; “California does not have a lower rate for capital gains.” The three federal columns tie on rate for the first group because net short-term capital gain and wagering winnings are both taxed at ordinary rates; they differ on loss rules. All twenty steps and every view are on the <a href="calculator.html">calculator page</a>.</p>
     <div class="table-wrap">
       <table>
         <thead>
@@ -142,7 +155,7 @@
             <td>Section 1256 contract</td>
             <td>60 percent long-term and 40 percent short-term regardless of holding period. Open contracts are marked to market at year-end. IRS Form 6781 is the form titled for these contracts. Its instructions were not line-read in this pass, so line numbers are not stated.</td>
             <td>No California preferential rate on the 60 percent slice. Whether California adopts the year-end mark for these contracts was not confirmed by an FTB sentence. Left open.</td>
-            <td>A regulated futures contract must be traded on a qualified board or exchange <em>and</em> the deposit and withdrawal amounts must depend on marking to market. KalshiEX is a DCM. Kalshi Klear told the CFTC on 26 March 2026 that these contracts are fully collateralized swaps and “are not traded on margin.” That cuts against a casual 60/40 claim. It is not an IRS ruling.</td>
+            <td>A regulated futures contract must be traded on a qualified board or exchange <em>and</em> the deposit and withdrawal amounts must depend on marking to market — both elements are now quoted from § 1256(g)(1) (<a href="ledger.html#F45">F45</a>). Section 1256(f)(2) adds that 60/40 never applies to gain that is otherwise ordinary (<a href="ledger.html#F46">F46</a>). KalshiEX is a DCM. Kalshi Klear told the CFTC on 26 March 2026 that these contracts are fully collateralized swaps and “are not traded on margin.” That cuts against a casual 60/40 claim. It is not an IRS ruling.</td>
           </tr>
           <tr>
             <td>Ordinary income that is not capital gain and not wagering</td>
@@ -248,10 +261,11 @@
 <p>These are the limits in the way of a finished legal answer. They are the next session’s work, not footnotes to ignore. Detail and the reading order are on <a href="method.html">How to extend</a> and <a href="flags.html">Flags</a>.</p>
 <ul class="clean">
   <li>No IRS ruling names these contracts. Character stays open on purpose.</li>
-  <li>Section 1256(g)(1) was not rendered in the direct statute fetch. Re-read it before anyone treats the mark-to-market element as a closed quote.</li>
+  <li>Section 1256(g)(1) was line-read on 24 September 2026 and is now quoted (F45). Whether Kalshi’s fully collateralized, non-margined contracts satisfy its mark-to-market deposit element is still not an IRS determination.</li>
+  <li>The calculator compares characters; it does not compute losses. Loss rules are the largest real-world difference between the tied rows and remain described, not modeled.</li>
   <li>Section 1221, section 1001, and section 1234A were not line-read. “Capital asset” is a candidate path, not a holding.</li>
   <li>California does not conform to the federal 90 percent wagering-loss cap. The California percentage itself was not computed. RTC section 17201 still needs a line read.</li>
-  <li>A final 2026 California individual rate schedule was not on an FTB page located here. The rate table on this page is the 2025 FTB schedule.</li>
+  <li>A final 2026 California individual rate schedule was not on an FTB page located here; the 2026 URL pattern returned FTB’s 404 page on 24 September 2026. The rate table on this page is the 2025 FTB schedule. At or below $100,000 FTB directs filers to the Tax Table, which the calculator approximates with the schedule formula (F49).</li>
   <li>No California Board of Accountancy record was matched to a published opinion. The CPA seats are empty. A self-reported New Jersey license number was not confirmed on that board’s portal.</li>
   <li>A 22 September 2026 news report of a margin request was not used. The retrieved filing, dated 26 March 2026, still says event contracts are not traded on margin.</li>
 </ul>
@@ -261,6 +275,7 @@
     <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Initial source pass.</strong> IRS topics 409, 419, and 559; Rev. Proc. 2025-32; IR-2025-103; sections 61, 1256, and 165; FTB capital-gain, conformity, and federal-change pages; 2025 California rate schedules; CFTC Release 8302-20; Kalshi Klear’s 26 March 2026 filing; Kalshi help articles dated 21 June 2026 and 25 August 2026.</p></div>
     <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Character left open.</strong> No IRS ruling naming event contracts was located. Section 1256 was not adopted as a default.</p></div>
     <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>California nonconformity recorded.</strong> No lower capital-gain rate. No conformity to the federal 90 percent wagering-loss cap. No final 2026 California individual rate schedule was located; the 2026 estimated-tax worksheet points to the 2025 tax table.</p></div>
+    <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Character comparison added to the calculator.</strong> Re-read Rev. Proc. 2025-32 § 4.01 and § 4.03, 26 U.S.C. § 1(h) and § 1(j)(5), § 1256(a), (b)(2)(B), (f)(2), and (g)(1), FTB 2025 Schedule X, the FTB capital-gains page, Kalshi’s tax article (still dated 21 June 2026), and IRS Topic 419 (still pre-2026 loss text). Five scenarios now move from one slider. F45–F50 added.</p></div>
     <div class="feed-item"><p class="feed-date">2026-09-24</p><p><strong>Practitioner seats left empty.</strong> No California Board of Accountancy record was matched to a published Kalshi-tax opinion. A self-reported out-of-state license number was not confirmed on that state’s portal.</p></div>
   </main>
   <footer class="site">

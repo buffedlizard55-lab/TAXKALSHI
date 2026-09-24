@@ -96,7 +96,10 @@
     <h2>Round 3 — Are the contracts section 1256 contracts?</h2>
     <div class="seat">
       <div class="seat-head"><span class="seat-name">Code</span><span class="vote vote-dissent">Dissent from automatic 60/40</span></div>
-      <p>Section 1256(a) gives the 60/40 split and the year-end mark only to a section 1256 contract. Section 1256(b)(2)(B), quoted on this page’s source pass from Cornell LII, excludes specified swaps “or similar agreement.” A qualified board or exchange is only one element. The mark-to-market deposit-and-withdrawal element in section 1256(g)(1) was seen in a search extract of the Office of the Law Revision Counsel page. The direct fetch did not render subsection (g). That element is flagged for a line re-read and is not quoted here as if this pass closed it. What this pass does quote from the IRS is the qualified-board definition:</p>
+      <p>Section 1256(a) gives the 60/40 split and the year-end mark only to a section 1256 contract. Section 1256(b)(2)(B), quoted from Cornell LII, excludes specified swaps “or similar agreement.” A qualified board or exchange is only one element. The other element was line-read on 24 September 2026:</p>
+      <blockquote><p>The term “regulated futures contract” means a contract— (A) with respect to which the amount required to be deposited and the amount which may be withdrawn depends on a system of marking to market, and (B) which is traded on or subject to the rules of a qualified board or exchange.</p><cite><a href="https://www.law.cornell.edu/uscode/text/26/1256">26 U.S.C. § 1256(g)(1)</a></cite></blockquote>
+      <blockquote><p>Paragraph (3) of subsection (a) shall not apply to any gain or loss which, but for such paragraph, would be ordinary income or loss.</p><cite><a href="https://www.law.cornell.edu/uscode/text/26/1256">26 U.S.C. § 1256(f)(2)</a></cite></blockquote>
+      <p>So even a contract that is a section 1256 contract gets no 60/40 split if its gain is ordinary in character. The qualified-board definition the IRS itself quotes:</p>
       <blockquote><p>(B) a domestic board of trade designated as a contract market by the Commodity Futures Trading Commission</p><cite><a href="https://www.irs.gov/pub/irs-drop/rr-07-26.pdf">Rev. Rul. 2007-26</a>, quoting § 1256(g)(7)</cite></blockquote>
     </div>
     <div class="seat">
@@ -152,7 +155,32 @@
     </div>
     <p><strong>Round result:</strong> settled for the rate. Open for final 2026 dollar brackets, because the 2026 FTB individual rate schedule was not located. Use the 2025 FTB PDF until that schedule is published, and label the year.</p>
 
-    <h2>Round 6 — Withholding and penalties</h2>
+    <h2>Round 6 — What does each answer cost? (the calculator’s brief)</h2>
+    <div class="seat">
+      <div class="seat-head"><span class="seat-name">Code</span><span class="vote vote-agree">Stacking rule quoted; arithmetic follows it</span></div>
+      <blockquote><p>(A) a tax computed at the rates and in the same manner as if this subsection had not been enacted on the greater of— (i) taxable income reduced by the net capital gain; … (B) 0 percent of so much of the adjusted net capital gain (or, if less, taxable income) as does not exceed the excess (if any) of— (i) the amount of taxable income which would (without regard to this paragraph) be taxed at a rate below 25 percent, over (ii) the taxable income reduced by the adjusted net capital gain; (C) 15 percent of the lesser of … (D) 20 percent of the adjusted net capital gain</p><cite><a href="https://www.law.cornell.edu/uscode/text/26/1">26 U.S.C. § 1(h)(1)</a>, with § 1(j)(5) substituting the maximum zero rate amount and maximum 15-percent rate amount</cite></blockquote>
+      <p>The calculator taxes the ordinary slice first and stacks the long-term slice on top against the 2026 breakpoints of $49,450 and $545,500. At $200,000 that is $40,598.00 ordinary, $30,312.00 under section 1256, $22,582.50 if entirely long-term. The Code seat signs the arithmetic and refuses to sign the label.</p>
+    </div>
+    <div class="seat">
+      <div class="seat-head"><span class="seat-name">IRS administrative</span><span class="vote vote-agree">Breakpoints from the revenue procedure</span></div>
+      <blockquote><p>All Other Individuals — $49,450 — $545,500</p><cite><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Rev. Proc. 2025-32 § 4.03</a>, re-read 24 September 2026</cite></blockquote>
+      <p>Topic 409’s 2025 figures ($48,350 / $533,400) are not used for the 2026 model. The seat also notes that net short-term capital gain and wagering winnings both land on the ordinary table, which is why three scenarios tie on rate.</p>
+    </div>
+    <div class="seat">
+      <div class="seat-head"><span class="seat-name">California FTB</span><span class="vote vote-agree">One California column, plus a rounding flag</span></div>
+      <p>Schedule X is applied identically in every scenario, because California has no lower capital-gain rate. The seat flags that FTB’s PDF says to use the Tax Table at or below $100,000; the calculator uses the schedule formula throughout, so those rows can differ from the Tax Table by rounding (F49).</p>
+    </div>
+    <div class="seat">
+      <div class="seat-head"><span class="seat-name">Platform and CFTC</span><span class="vote vote-dissent">The lower rows depend on facts the platform’s own filing cuts against</span></div>
+      <p>The section 1256 row is lower by $10,286.00 at $200,000. The platform seat repeats that Kalshi Klear told the CFTC the contracts are fully collateralized swaps not traded on margin. That is the deposit-and-withdrawal element of section 1256(g)(1), now quoted above. The seat will not let the lower number be read as the likely number.</p>
+    </div>
+    <div class="seat">
+      <div class="seat-head"><span class="seat-name">CPA seats</span><span class="vote vote-insufficient">Insufficient record</span></div>
+      <p>Practitioner pages re-read on 24 September 2026 disagree: some say the IRS is silent and list the same candidate treatments; at least one asserts section 1256 as settled and a $600 Form 1099-B, contrary to Kalshi’s own article. None is admitted without a board lookup.</p>
+    </div>
+    <p><strong>Round result:</strong> the calculator is admitted as a comparison, not a conclusion. The size of the gap is the reason the character question matters; it is not evidence about which answer is right.</p>
+
+    <h2>Round 7 — Withholding and penalties</h2>
     <div class="callout">
       The prompt fixes the facts: a normal filer, not subject to withholding, not subject to penalties. The engine answers the tax under those facts. It does not design a way to avoid a penalty, and it does not compute one.
     </div>
@@ -170,7 +198,7 @@
     <ol class="steps">
       <li>Report the economic profit. A missing contract-level 1099 is not a zero.</li>
       <li>Keep interest and credits off the contract line.</li>
-      <li>Do not claim section 1256 on the current record.</li>
+      <li>Do not claim section 1256 on the current record. Use the calculator to see what the claim would be worth, and treat that number as the size of the risk, not a discount.</li>
       <li>Do not report every contract as wagering. Do not ignore the wagering analogy for sports-outcome contracts.</li>
       <li>If the profit is in California taxable income, tax it at ordinary California rates. Do not import the federal long-term rate or the federal 90 percent wagering cap.</li>
       <li>Leave the CPA seats empty until a board lookup is pasted into <code>data/panel.json</code> with the license URL, status, and the date it was seen. The validator rejects a filled seat that has no lookup record.</li>

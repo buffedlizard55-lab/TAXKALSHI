@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tax cost calculator — TAXKALSHI</title>
-  <meta name="description" content="A transparent 10,000-dollar step model of federal and California tax on modeled taxable income from 10,000 through 200,000 dollars, sourced to IRS and California FTB rate tables.">
+  <meta name="description" content="A transparent 10,000-dollar step model of federal and California tax from 10,000 through 200,000 dollars, computed side by side under every candidate tax character of Kalshi event-contract profit, sourced to IRS, the Internal Revenue Code, and California FTB rate tables.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +17,8 @@
     <div class="mast-inner">
       <a class="brand" href="index.html">
         <p class="brand-kicker">Calculator · 10,000-dollar steps</p>
-        <p class="brand-title">A transparent tax-cost model</p>
-        <small>Federal 2026 brackets and California’s recorded 2025 Schedule X, with the year labels left visible.</small>
+        <p class="brand-title">What each answer to the character question costs</p>
+        <small>One slider, five candidate characters, federal 2026 brackets and California’s recorded 2025 Schedule X, year labels left visible.</small>
       </a>
       <p class="record">Record date <strong>24 September 2026</strong><br><a href="index.html">Back to the summary</a></p>
     </div>
@@ -37,17 +37,17 @@
     </div>
   </nav>
   <main id="main" class="wrap">
-    <p class="lede">Select a 10,000-dollar step to see the modeled federal tax, California tax, combined amount, and the cost of that step. The full table is below so every result can be reviewed without entering personal data.</p>
+    <p class="lede">The open question on the summary page is <em>what kind of income is the contract profit</em>. The IRS has not said. So this page does not pick one. It takes the same dollar amount, in $10,000 steps from $10,000 to $200,000, and computes the modeled federal and California tax under every candidate character at once. Move the slider and all five move together, so the difference is the answer you can actually read.</p>
 
     <section class="answer" aria-labelledby="model-title">
-      <p class="chips"><span class="chip chip-settled">Rates: sourced</span><span class="chip chip-open">Character: open</span><span class="chip chip-flag">Illustration, not a return</span></p>
+      <p class="chips"><span class="chip chip-settled">Rates: sourced</span><span class="chip chip-open">Character: open — compared, not decided</span><span class="chip chip-flag">Illustration, not a return</span></p>
       <h2 id="model-title">Read the model before reading the number</h2>
-      <p>This calculator treats the selected amount as <strong>total taxable income</strong>, not gross Kalshi deposits, contract notional, account balance, or necessarily the P&amp;L shown by Kalshi. It applies the 2026 federal single-filer ordinary rate table and the 2025 California Schedule X rate table (single or married/RDP filing separately).</p>
+      <p>The selected amount is treated as <strong>total taxable income</strong>, not gross Kalshi deposits, contract notional, account balance, or necessarily the P&amp;L shown by Kalshi. Federal uses the tax-year 2026 single-filer tables in Revenue Procedure 2025-32. California uses FTB’s 2025 Schedule X (single or married/RDP filing separately) in every scenario, because FTB says California has no lower rate for capital gains.</p>
       <div class="grid-2">
-        <div class="card card-settled"><h3>Included</h3><ul class="clean"><li>Federal ordinary-income brackets for tax year 2026.</li><li>California ordinary brackets from the official 2025 Schedule X.</li><li>Amounts from $10,000 through $200,000 in $10,000 steps.</li><li>Progressive rates: the next step can cross a bracket.</li></ul></div>
-        <div class="card card-flag"><h3>Not included</h3><ul class="clean"><li>Deductions, credits, dependents, or other income.</li><li>NIIT, AMT, self-employment tax, penalties, or withholding.</li><li>Capital-loss, wagering-loss, long-term capital-gain, or section 1256 rules.</li><li>A conclusion about the tax character of a particular Kalshi contract.</li></ul></div>
+        <div class="card card-settled"><h3>Included</h3><ul class="clean"><li>Five candidate characters: ordinary, short-term capital, section 1256 (60/40), long-term capital, wagering.</li><li>Federal ordinary brackets for tax year 2026 (Rev. Proc. 2025-32 § 4.01, Table 3).</li><li>Federal 0 / 15 / 20 percent stacking under § 1(h) with the 2026 breakpoints $49,450 and $545,500 (§ 1(j)(5); Rev. Proc. 2025-32 § 4.03).</li><li>California Schedule X, 2025, applied identically to every scenario.</li><li>Progressive rates: the next step can cross a bracket.</li></ul></div>
+        <div class="card card-flag"><h3>Not included</h3><ul class="clean"><li>Deductions, credits, dependents, or other income.</li><li>NIIT, AMT, self-employment tax, penalties, or withholding.</li><li>Loss arithmetic. Loss rules differ sharply by character and are described below, not computed.</li><li>Year-end mark-to-market timing under § 1256, and whether California follows it.</li><li>A conclusion about the character of any particular Kalshi contract.</li></ul></div>
       </div>
-      <p class="small muted">Why the California year matters: the research record does not contain a final 2026 California individual rate schedule. The <a href="https://www.ftb.ca.gov/forms/2026/2026-540-es-instructions.html">2026 FTB Form 540-ES instructions</a> tell filers to use the 2025 tax table in that estimated-tax worksheet. This page therefore labels the California source as 2025 instead of silently calling it 2026.</p>
+      <p class="small muted">Why the California year matters: the research record does not contain a final 2026 California individual rate schedule (a request for <code>2026-540-tax-rate-schedules.pdf</code> returned FTB’s 404 page on 24 September 2026). The <a href="https://www.ftb.ca.gov/forms/2026/2026-540-es-instructions.html">2026 FTB Form 540-ES instructions</a> tell filers to use the 2025 tax table in that estimated-tax worksheet. This page therefore labels the California source as 2025 instead of silently calling it 2026. FTB also says the rate <em>schedule</em> is for taxable income over $100,000 and the Tax <em>Table</em> applies at or below; the schedule formula is used at every step here, so rows at or below $100,000 can differ from the Tax Table by rounding (<a href="ledger.html#F49">F49</a>).</p>
     </section>
 
     <section class="calculator-panel" data-tax-calculator aria-labelledby="selected-title">
@@ -56,61 +56,110 @@
           <p class="eyebrow">No personal-data form</p>
           <h2 id="selected-title">Slide to a 10,000-dollar step</h2>
         </div>
-        <output class="selected-amount" data-selected-amount aria-live="polite">$50,000</output>
+        <output class="selected-amount" data-selected-amount aria-live="polite">$50,000.00</output>
       </div>
-      <label class="range-label" for="tax-step">Modeled taxable income <span data-selected-label>$50,000</span></label>
-      <input id="tax-step" data-amount-slider type="range" min="1" max="20" step="1" value="5">
-      <div class="range-scale" aria-hidden="true"><span>$10k</span><span>$100k</span><span>$200k</span></div>
-      <div class="metric-grid">
-        <div class="metric"><span>Federal tax</span><strong data-federal-tax>$5,752.00</strong></div>
-        <div class="metric"><span>California tax</span><strong data-california-tax>$1,534.89</strong></div>
-        <div class="metric metric-total"><span>Combined model</span><strong data-combined-tax>$7,286.89</strong></div>
-        <div class="metric"><span>Effective combined rate</span><strong data-effective-rate>14.57%</strong></div>
-        <div class="metric"><span>Modeled amount left</span><strong data-after-tax>$42,713.11</strong></div>
-        <div class="metric"><span>Cost of this 10k step</span><strong data-step-cost>$1,770.96</strong></div>
+      <label class="range-label" for="tax-step">Modeled taxable income <span data-selected-label>$50,000.00</span></label>
+      <input id="tax-step" data-amount-slider type="range" min="1" max="20" step="1" value="5" aria-describedby="slider-help">
+      <div class="range-scale" aria-hidden="true"><span>$10k</span><span>$50k</span><span>$100k</span><span>$150k</span><span>$200k</span></div>
+      <div class="step-buttons"><button type="button" data-step-button="-1" aria-label="Previous 10,000-dollar step">− $10,000</button><button type="button" data-step-button="1" aria-label="Next 10,000-dollar step">+ $10,000</button></div>
+      <p id="slider-help" class="small muted">All five scenario cards below recompute from this one control. Click any row of the table to jump to it.</p>
+      <p class="scenario-spread" data-scenario-spread aria-live="polite">At <strong>$50,000.00</strong> of modeled taxable income the character question is worth <strong>$5,669.50</strong> in this model: from $1,617.39 (lowest scenario) to $7,286.89 (highest). The California share is <strong>$1,534.89</strong> in every scenario.</p>
+      <div class="scenario-grid" data-scenario-cards>
+        <article class="card scenario-card card-open is-baseline"><p class="eyebrow">Baseline</p><h3>Ordinary income</h3><dl class="scenario-figures"><div><dt>Federal 2026</dt><dd>$5,752.00</dd></div><div><dt>California 2025 sched.</dt><dd>$1,534.89</dd></div><div class="scenario-combined"><dt>Combined</dt><dd>$7,286.89</dd></div><div><dt>Effective rate</dt><dd>14.57%</dd></div><div><dt>Left after model</dt><dd>$42,713.11</dd></div><div><dt>Cost of this $10k step</dt><dd>$1,770.96</dd></div></dl><p class="scenario-diff is-same">same as ordinary</p><p class="small muted">Whole amount taxed on the 2026 ordinary rate table.</p></article>
+        <article class="card scenario-card card-open"><p class="eyebrow">Compared with the baseline</p><h3>Short-term capital gain (held one year or less)</h3><dl class="scenario-figures"><div><dt>Federal 2026</dt><dd>$5,752.00</dd></div><div><dt>California 2025 sched.</dt><dd>$1,534.89</dd></div><div class="scenario-combined"><dt>Combined</dt><dd>$7,286.89</dd></div><div><dt>Effective rate</dt><dd>14.57%</dd></div><div><dt>Left after model</dt><dd>$42,713.11</dd></div><div><dt>Cost of this $10k step</dt><dd>$1,770.96</dd></div></dl><p class="scenario-diff is-same">same as ordinary</p><p class="small muted">Net short-term capital gain is taxed as ordinary income at graduated rates, so the federal dollars match the ordinary row.</p></article>
+        <article class="card scenario-card card-open"><p class="eyebrow">Compared with the baseline</p><h3>Section 1256 contract (60% long-term / 40% short-term)</h3><dl class="scenario-figures"><div><dt>Federal 2026</dt><dd>$2,234.50</dd></div><div><dt>California 2025 sched.</dt><dd>$1,534.89</dd></div><div class="scenario-combined"><dt>Combined</dt><dd>$3,769.39</dd></div><div><dt>Effective rate</dt><dd>7.54%</dd></div><div><dt>Left after model</dt><dd>$46,230.61</dd></div><div><dt>Cost of this $10k step</dt><dd>$1,133.46</dd></div></dl><p class="scenario-diff is-lower">−$3,517.50 vs. ordinary</p><p class="small muted">40 percent taxed first on the ordinary table; 60 percent stacked on top at 0/15/20 percent using the 2026 breakpoints (section 1(h), section 1(j)(5)).</p></article>
+        <article class="card scenario-card card-open"><p class="eyebrow">Compared with the baseline</p><h3>Long-term capital gain (held more than one year)</h3><dl class="scenario-figures"><div><dt>Federal 2026</dt><dd>$82.50</dd></div><div><dt>California 2025 sched.</dt><dd>$1,534.89</dd></div><div class="scenario-combined"><dt>Combined</dt><dd>$1,617.39</dd></div><div><dt>Effective rate</dt><dd>3.23%</dd></div><div><dt>Left after model</dt><dd>$48,382.61</dd></div><div><dt>Cost of this $10k step</dt><dd>$653.46</dd></div></dl><p class="scenario-diff is-lower">−$5,669.50 vs. ordinary</p><p class="small muted">Whole amount treated as adjusted net capital gain: 0 percent up to $49,450, 15 percent up to $545,500, 20 percent above (2026, single). This is the lowest federal bound in the model.</p></article>
+        <article class="card scenario-card card-open"><p class="eyebrow">Compared with the baseline</p><h3>Wagering (gambling) income</h3><dl class="scenario-figures"><div><dt>Federal 2026</dt><dd>$5,752.00</dd></div><div><dt>California 2025 sched.</dt><dd>$1,534.89</dd></div><div class="scenario-combined"><dt>Combined</dt><dd>$7,286.89</dd></div><div><dt>Effective rate</dt><dd>14.57%</dd></div><div><dt>Left after model</dt><dd>$42,713.11</dd></div><div><dt>Cost of this $10k step</dt><dd>$1,770.96</dd></div></dl><p class="scenario-diff is-same">same as ordinary</p><p class="small muted">Winnings are reported on Schedule 1 and taxed at ordinary rates, so the federal dollars match the ordinary row when the amount is already net taxable income.</p></article>
       </div>
-      <p class="small muted" data-calculator-status>Loading the rate table from <code>data/calculator.json</code>…</p>
+      <p class="small muted" data-calculator-status>Loading the rate model from <code>data/calculator.json</code>…</p>
     </section>
 
-    <h2>Every $10,000 step</h2>
-    <p>“Cost of this 10k step” is the combined modeled tax at that row minus the combined modeled tax at the prior row. The first row compares $10,000 with $0. It is not a separate deduction or an extra tax.</p>
+    <h2 id="how-to-read">How to read the comparison</h2>
+    <div class="grid-3">
+      <article class="card card-open"><h3>Three rows tie on rate, not on losses</h3><p>Ordinary, short-term capital, and wagering produce the same federal dollars in this model because all three are taxed on the ordinary table and the amount is already <em>net</em> taxable income. Where they differ is what happens to losses and which form is used. That is why the wagering row is not “free”: with any losses, its 90 percent federal cap and itemizing requirement make the real burden higher than the number shown.</p></article>
+      <article class="card card-settled"><h3>Two rows are lower only if the character holds</h3><p>Section 1256 and long-term capital are lower because 60 percent or 100 percent of the amount rides the 0 / 15 / 20 percent stack. Neither is established for these contracts. Section 1256 requires the contract to be a section 1256 contract, and 60/40 never applies to gain that is otherwise ordinary (§ 1256(f)(2)). Long-term requires an actual holding period over one year.</p></article>
+      <article class="card card-flag"><h3>California does not move</h3><p>The California column is identical in every scenario. FTB: “California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income.” The character question changes the federal number only. It still changes California <em>loss</em> treatment: California does not conform to the federal 90 percent wagering cap.</p></article>
+    </div>
+
+    <h2>Every $10,000 step, every scenario</h2>
+    <p>Switch the view to compare federal only, California only, the difference from the ordinary baseline, the effective rate, or the cost of each step. “Cost of this $10k step” is the combined modeled tax at that row minus the combined modeled tax at the prior row; the first row compares $10,000 with $0.</p>
+    <div class="view-switch" role="group" aria-label="Table view">
+      <button type="button" data-table-view="combined" aria-pressed="true">Combined</button>
+      <button type="button" data-table-view="federal" aria-pressed="false">Federal only</button>
+      <button type="button" data-table-view="california" aria-pressed="false">California only</button>
+      <button type="button" data-table-view="difference" aria-pressed="false">Difference vs. ordinary</button>
+      <button type="button" data-table-view="rate" aria-pressed="false">Effective rate</button>
+      <button type="button" data-table-view="step" aria-pressed="false">Cost of each step</button>
+    </div>
+    <p class="small muted">Showing: <strong data-table-view-label>Combined federal + California</strong>. Federal 2026 single; California 2025 Schedule X.</p>
     <div class="table-wrap">
       <table class="calculator-table">
-        <caption class="sr-only">Modeled tax by taxable income amount</caption>
-        <thead><tr><th scope="col">Modeled taxable income</th><th scope="col">Federal 2026</th><th scope="col">California 2025</th><th scope="col">Combined</th><th scope="col">Effective rate</th><th scope="col">Cost of this $10k step</th></tr></thead>
+        <caption class="sr-only">Modeled tax by taxable income amount and candidate character</caption>
+        <thead data-tax-table-head>
+          <!-- calculator-head:start -->
+<tr><th scope="col">Modeled taxable income</th><th scope="col">Ordinary</th><th scope="col">Short-term capital</th><th scope="col">Section 1256</th><th scope="col">Long-term capital</th><th scope="col">Wagering</th></tr>
+<!-- calculator-head:end -->
+        </thead>
         <tbody data-tax-table>
-          <tr data-amount-row data-amount="10000"><th scope="row">$10,000.00</th><td>$1,000.00</td><td>$100.00</td><td><strong>$1,100.00</strong></td><td>11.00%</td><td>$1,100.00</td></tr>
-          <tr data-amount-row data-amount="20000"><th scope="row">$20,000.00</th><td>$2,152.00</td><td>$289.21</td><td><strong>$2,441.21</strong></td><td>12.21%</td><td>$1,341.21</td></tr>
-          <tr data-amount-row data-amount="30000"><th scope="row">$30,000.00</th><td>$3,352.00</td><td>$563.93</td><td><strong>$3,915.93</strong></td><td>13.05%</td><td>$1,474.72</td></tr>
-          <tr data-amount-row data-amount="40000"><th scope="row">$40,000.00</th><td>$4,552.00</td><td>$963.93</td><td><strong>$5,515.93</strong></td><td>13.79%</td><td>$1,600.00</td></tr>
-          <tr data-amount-row data-amount="50000"><th scope="row">$50,000.00</th><td>$5,752.00</td><td>$1,534.89</td><td><strong>$7,286.89</strong></td><td>14.57%</td><td>$1,770.96</td></tr>
-          <tr data-amount-row data-amount="60000"><th scope="row">$60,000.00</th><td>$7,912.00</td><td>$2,184.05</td><td><strong>$10,096.05</strong></td><td>16.83%</td><td>$2,809.16</td></tr>
-          <tr data-amount-row data-amount="70000"><th scope="row">$70,000.00</th><td>$10,112.00</td><td>$2,984.05</td><td><strong>$13,096.05</strong></td><td>18.71%</td><td>$3,000.00</td></tr>
-          <tr data-amount-row data-amount="80000"><th scope="row">$80,000.00</th><td>$12,312.00</td><td>$3,878.64</td><td><strong>$16,190.64</strong></td><td>20.24%</td><td>$3,094.59</td></tr>
-          <tr data-amount-row data-amount="90000"><th scope="row">$90,000.00</th><td>$14,512.00</td><td>$4,808.64</td><td><strong>$19,320.64</strong></td><td>21.47%</td><td>$3,130.00</td></tr>
-          <tr data-amount-row data-amount="100000"><th scope="row">$100,000.00</th><td>$16,712.00</td><td>$5,738.64</td><td><strong>$22,450.64</strong></td><td>22.45%</td><td>$3,130.00</td></tr>
-          <tr data-amount-row data-amount="110000"><th scope="row">$110,000.00</th><td>$18,998.00</td><td>$6,668.64</td><td><strong>$25,666.64</strong></td><td>23.33%</td><td>$3,216.00</td></tr>
-          <tr data-amount-row data-amount="120000"><th scope="row">$120,000.00</th><td>$21,398.00</td><td>$7,598.64</td><td><strong>$28,996.64</strong></td><td>24.16%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="130000"><th scope="row">$130,000.00</th><td>$23,798.00</td><td>$8,528.64</td><td><strong>$32,326.64</strong></td><td>24.87%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="140000"><th scope="row">$140,000.00</th><td>$26,198.00</td><td>$9,458.64</td><td><strong>$35,656.64</strong></td><td>25.47%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="150000"><th scope="row">$150,000.00</th><td>$28,598.00</td><td>$10,388.64</td><td><strong>$38,986.64</strong></td><td>25.99%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="160000"><th scope="row">$160,000.00</th><td>$30,998.00</td><td>$11,318.64</td><td><strong>$42,316.64</strong></td><td>26.45%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="170000"><th scope="row">$170,000.00</th><td>$33,398.00</td><td>$12,248.64</td><td><strong>$45,646.64</strong></td><td>26.85%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="180000"><th scope="row">$180,000.00</th><td>$35,798.00</td><td>$13,178.64</td><td><strong>$48,976.64</strong></td><td>27.21%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="190000"><th scope="row">$190,000.00</th><td>$38,198.00</td><td>$14,108.64</td><td><strong>$52,306.64</strong></td><td>27.53%</td><td>$3,330.00</td></tr>
-          <tr data-amount-row data-amount="200000"><th scope="row">$200,000.00</th><td>$40,598.00</td><td>$15,038.64</td><td><strong>$55,636.64</strong></td><td>27.82%</td><td>$3,330.00</td></tr>
+          <!-- calculator-rows:start -->
+<tr data-amount-row data-amount="10000"><th scope="row">$10,000.00</th><td>$1,100.00</td><td>$1,100.00</td><td>$500.00</td><td>$100.00</td><td>$1,100.00</td></tr>
+<tr data-amount-row data-amount="20000"><th scope="row">$20,000.00</th><td>$2,441.21</td><td>$2,441.21</td><td>$1,089.21</td><td>$289.21</td><td>$2,441.21</td></tr>
+<tr data-amount-row data-amount="30000"><th scope="row">$30,000.00</th><td>$3,915.93</td><td>$3,915.93</td><td>$1,763.93</td><td>$563.93</td><td>$3,915.93</td></tr>
+<tr data-amount-row data-amount="40000"><th scope="row">$40,000.00</th><td>$5,515.93</td><td>$5,515.93</td><td>$2,635.93</td><td>$963.93</td><td>$5,515.93</td></tr>
+<tr data-amount-row data-amount="50000"><th scope="row">$50,000.00</th><td>$7,286.89</td><td>$7,286.89</td><td>$3,769.39</td><td>$1,617.39</td><td>$7,286.89</td></tr>
+<tr data-amount-row data-amount="60000"><th scope="row">$60,000.00</th><td>$10,096.05</td><td>$10,096.05</td><td>$6,398.55</td><td>$3,766.55</td><td>$10,096.05</td></tr>
+<tr data-amount-row data-amount="70000"><th scope="row">$70,000.00</th><td>$13,096.05</td><td>$13,096.05</td><td>$9,178.55</td><td>$6,066.55</td><td>$13,096.05</td></tr>
+<tr data-amount-row data-amount="80000"><th scope="row">$80,000.00</th><td>$16,190.64</td><td>$16,190.64</td><td>$12,053.14</td><td>$8,461.14</td><td>$16,190.64</td></tr>
+<tr data-amount-row data-amount="90000"><th scope="row">$90,000.00</th><td>$19,320.64</td><td>$19,320.64</td><td>$14,963.14</td><td>$10,891.14</td><td>$19,320.64</td></tr>
+<tr data-amount-row data-amount="100000"><th scope="row">$100,000.00</th><td>$22,450.64</td><td>$22,450.64</td><td>$17,873.14</td><td>$13,321.14</td><td>$22,450.64</td></tr>
+<tr data-amount-row data-amount="110000"><th scope="row">$110,000.00</th><td>$25,666.64</td><td>$25,666.64</td><td>$20,783.14</td><td>$15,751.14</td><td>$25,666.64</td></tr>
+<tr data-amount-row data-amount="120000"><th scope="row">$120,000.00</th><td>$28,996.64</td><td>$28,996.64</td><td>$23,693.14</td><td>$18,181.14</td><td>$28,996.64</td></tr>
+<tr data-amount-row data-amount="130000"><th scope="row">$130,000.00</th><td>$32,326.64</td><td>$32,326.64</td><td>$26,380.64</td><td>$20,611.14</td><td>$32,326.64</td></tr>
+<tr data-amount-row data-amount="140000"><th scope="row">$140,000.00</th><td>$35,656.64</td><td>$35,656.64</td><td>$29,090.64</td><td>$23,041.14</td><td>$35,656.64</td></tr>
+<tr data-amount-row data-amount="150000"><th scope="row">$150,000.00</th><td>$38,986.64</td><td>$38,986.64</td><td>$31,800.64</td><td>$25,471.14</td><td>$38,986.64</td></tr>
+<tr data-amount-row data-amount="160000"><th scope="row">$160,000.00</th><td>$42,316.64</td><td>$42,316.64</td><td>$34,510.64</td><td>$27,901.14</td><td>$42,316.64</td></tr>
+<tr data-amount-row data-amount="170000"><th scope="row">$170,000.00</th><td>$45,646.64</td><td>$45,646.64</td><td>$37,220.64</td><td>$30,331.14</td><td>$45,646.64</td></tr>
+<tr data-amount-row data-amount="180000"><th scope="row">$180,000.00</th><td>$48,976.64</td><td>$48,976.64</td><td>$39,930.64</td><td>$32,761.14</td><td>$48,976.64</td></tr>
+<tr data-amount-row data-amount="190000"><th scope="row">$190,000.00</th><td>$52,306.64</td><td>$52,306.64</td><td>$42,640.64</td><td>$35,191.14</td><td>$52,306.64</td></tr>
+<tr data-amount-row data-amount="200000"><th scope="row">$200,000.00</th><td>$55,636.64</td><td>$55,636.64</td><td>$45,350.64</td><td>$37,621.14</td><td>$55,636.64</td></tr>
+<!-- calculator-rows:end -->
         </tbody>
       </table>
     </div>
-    <p class="small muted">The rows are intentionally labeled “modeled taxable income.” A real return starts with the taxpayer’s total facts, and Kalshi says its P&amp;L is not tax advice. Use the <a href="reporting.html">forms and payment</a> page to keep contract P&amp;L, interest, credits, and digital-asset activity separate.</p>
+    <p class="small muted">The static rows above are the combined view, generated by <code>scripts/render_calculator.py</code> from the same JSON model and checked by the validator, so the page cannot silently disagree with the data file. The rows are intentionally labeled “modeled taxable income.” A real return starts with the taxpayer’s total facts, and Kalshi says its P&amp;L is not tax advice.</p>
+
+    <h2 id="scenarios">What each scenario assumes, and what it does to losses</h2>
+    <div class="table-wrap">
+      <table class="scenario-table">
+        <thead><tr><th scope="col">Character</th><th scope="col">Federal method in the model</th><th scope="col">California</th><th scope="col">Loss rule (not computed)</th><th scope="col">Form named in the record</th><th scope="col">Why it is not the default</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Ordinary income</th><td>2026 ordinary table on the whole amount.</td><td>Schedule X on the whole amount.</td><td>Not the $3,000 capital-loss cap and not the wagering cap.</td><td>Schedule 1 (Form 1040) if reported as other income; not confirmed by an IRS page for these contracts.</td><td>No IRS page assigns any character to event contracts (<a href="ledger.html#F03">F03</a>, <a href="ledger.html#F50">F50</a>).</td></tr>
+          <tr><th scope="row">Short-term capital gain</th><td>Same table: “Net short-term capital gains are subject to taxation as ordinary income at graduated tax rates.”</td><td>Schedule X. No lower rate.</td><td>Net against capital gains; excess up to $3,000 ($1,500 MFS) against other income; carryforward.</td><td>Form 8949 and Schedule D.</td><td>Requires a capital asset. Section 1221 was not line-read (<a href="ledger.html#F04">F04</a>–<a href="ledger.html#F09">F09</a>).</td></tr>
+          <tr><th scope="row">Section 1256 (60/40)</th><td>Ordinary table on 40 percent; 0 / 15 / 20 percent stack on 60 percent under § 1(h) and § 1(j)(5) with the 2026 breakpoints.</td><td>Schedule X on the whole amount. Year-end mark for California is open (<a href="ledger.html#F42">F42</a>).</td><td>Capital-loss rules on the split; open positions marked to market on the last business day of the year.</td><td>Form 6781, by title. Its instructions were not line-read.</td><td>Kalshi Klear calls the contracts fully collateralized swaps “not traded on margin” (<a href="ledger.html#F21">F21</a>, <a href="ledger.html#F43">F43</a>); § 1256(b)(2)(B) excludes swaps and similar agreements (<a href="ledger.html#F18">F18</a>); § 1256(g)(1) needs a mark-to-market deposit system (<a href="ledger.html#F45">F45</a>); 60/40 never applies to otherwise-ordinary gain (<a href="ledger.html#F46">F46</a>).</td></tr>
+          <tr><th scope="row">Long-term capital gain</th><td>Whole amount on the 0 / 15 / 20 percent stack: 0 percent to $49,450, 15 percent to $545,500, then 20 percent (2026, single).</td><td>Schedule X. Holding period does not change the California rate.</td><td>Same capital-loss rules as short-term.</td><td>Form 8949 and Schedule D.</td><td>Requires a holding period over one year, counted from the day after acquisition. Most contracts resolve sooner. A bound, not an expectation (<a href="ledger.html#F04">F04</a>, <a href="ledger.html#F15">F15</a>).</td></tr>
+          <tr><th scope="row">Wagering</th><td>Ordinary table on the whole amount (winnings go on Schedule 1).</td><td>Schedule X.</td><td>Federal: only if itemizing, only to the extent of gains, and only 90 percent of losses for tax years beginning after 31 December 2025. California does not conform to the 90 percent limit.</td><td>Schedule 1 for winnings; Schedule A for losses.</td><td>Topic 419 lists “sports betting” and says the list is not exhaustive; it does not name event contracts. Topic 419 still shows the pre-2026 loss text (<a href="ledger.html#F26">F26</a>–<a href="ledger.html#F29">F29</a>).</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Worked example at $200,000, so the arithmetic can be checked by hand</h2>
+    <div class="grid-2">
+      <article class="card"><h3>Ordinary / short-term / wagering</h3><p>Table 3: over $105,700 but not over $201,775 → $17,966 plus 24% of the excess over $105,700.<br>$17,966 + 0.24 × ($200,000 − $105,700) = $17,966 + $22,632 = <strong>$40,598.00</strong>.</p></article>
+      <article class="card"><h3>Section 1256 (60/40)</h3><p>Ordinary slice 40% = $80,000: $5,800 + 0.22 × ($80,000 − $50,400) = $12,312.00.<br>Long-term slice 60% = $120,000. Zero-rate room = $49,450 − $80,000 &lt; 0, so none at 0%. All $120,000 sits below $545,500 → 15% = $18,000.00.<br>Federal = $12,312 + $18,000 = <strong>$30,312.00</strong>, which is $10,286.00 less than ordinary.</p></article>
+      <article class="card"><h3>Long-term capital gain</h3><p>Ordinary slice = $0. Zero-rate room = $49,450 → 0% on $49,450. Remaining $150,550 at 15% = <strong>$22,582.50</strong>.</p></article>
+      <article class="card"><h3>California, every scenario</h3><p>Schedule X: over $72,724 but not over $371,479 → $3,201.97 plus 9.30% of the amount over $72,724.<br>$3,201.97 + 0.093 × ($200,000 − $72,724) = $3,201.97 + $11,836.67 = <strong>$15,038.64</strong>.</p></article>
+    </div>
 
     <h2>Source trail and limits</h2>
     <div class="grid-3">
-      <article class="card"><h3>Federal rate table</h3><p>Revenue Procedure 2025-32, section 4.01, provides the tax-year 2026 ordinary brackets used here.</p><p><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Read the IRS PDF</a></p></article>
-      <article class="card"><h3>California rate table</h3><p>FTB’s 2025 Schedule X provides the single/MFS California brackets used here. California has no lower capital-gain rate.</p><p><a href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf">Read the FTB schedule</a></p></article>
+      <article class="card"><h3>Federal rate table and breakpoints</h3><p>Revenue Procedure 2025-32, section 4.01 Table 3 (ordinary) and section 4.03 (maximum zero-rate and 15 percent amounts).</p><p><a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf">Read the IRS PDF</a></p></article>
+      <article class="card"><h3>Stacking rule</h3><p>26 U.S.C. § 1(h)(1)(A)–(D), as modified by § 1(j)(5). Ordinary income is counted first; adjusted net capital gain is stacked on top at 0, 15, then 20 percent.</p><p><a href="https://www.law.cornell.edu/uscode/text/26/1">Read 26 U.S.C. § 1</a></p></article>
+      <article class="card"><h3>60/40 and its limits</h3><p>26 U.S.C. § 1256(a)(3) gives the split; § 1256(b)(2)(B), (f)(2), and (g)(1) are the limits quoted in the ledger.</p><p><a href="https://www.law.cornell.edu/uscode/text/26/1256">Read 26 U.S.C. § 1256</a></p></article>
+      <article class="card"><h3>California rate table</h3><p>FTB’s 2025 Schedule X provides the single/MFS California brackets used in every scenario.</p><p><a href="https://www.ftb.ca.gov/forms/2025/2025-540-tax-rate-schedules.pdf">Read the FTB schedule</a></p></article>
+      <article class="card"><h3>Why California does not move</h3><p>“California does not have a lower rate for capital gains. All capital gains are taxed as ordinary income.”</p><p><a href="https://www.ftb.ca.gov/file/personal/income-types/capital-gains-and-losses.html">Read the FTB page</a></p></article>
       <article class="card"><h3>Why income is included</h3><p>Section 61 is the baseline inclusion rule. It does not settle the character of Kalshi event-contract profit.</p><p><a href="https://www.law.cornell.edu/uscode/text/26/61">Read 26 U.S.C. § 61</a></p></article>
     </div>
-    <div class="callout callout-red"><strong>Do not use the combined number as a filing result.</strong> The actual amount depends on filing status, all other income, deductions, credits, contract character, losses, and the tax year. The calculator does not decide the open Kalshi character question and does not calculate penalties or withholding.</div>
+    <div class="callout callout-red"><strong>Do not use any column as a filing result.</strong> The actual amount depends on filing status, all other income, deductions, credits, contract character, losses, and the tax year. The comparison shows what the open question is worth; it does not close it, and it does not calculate penalties or withholding.</div>
   </main>
   <footer class="site"><div class="footer-inner"><p>The model is stored in <code>data/calculator.json</code> and checked by <code>python3 scripts/validate_ledger.py</code>. <a href="method.html">Read the method</a>.</p></div></footer>
   <script src="assets/site.js"></script>

@@ -397,6 +397,60 @@
       "quote": "Tax. Figure your tax on the amount on line 3 using the 2025 tax table for Form 540 or Form 540NR. ... If you do not plan to itemize deductions, enter the standard deduction for your filing status: $5,706 single or married/RDP filing separately",
       "source_id": "ftb-540-es-2026",
       "why_it_matters": "The calculator keeps its California rate schedule labeled 2025 instead of presenting a 2025 table as a final 2026 California return schedule. The 2026 FTB worksheet is evidence for the year guardrail, not a final 2026 rate schedule."
+    },
+    {
+      "id": "F45",
+      "status": "settled",
+      "topic": "section-1256",
+      "source_id": "irc-1256",
+      "claim": "A regulated futures contract is a contract whose required deposit and permitted withdrawal depend on a system of marking to market, and which is traded on or subject to the rules of a qualified board or exchange. Both elements are in the definition.",
+      "quote": "The term “regulated futures contract” means a contract— (A) with respect to which the amount required to be deposited and the amount which may be withdrawn depends on a system of marking to market, and (B) which is traded on or subject to the rules of a qualified board or exchange.",
+      "why_it_matters": "This closes the earlier flag that section 1256(g)(1) had not rendered in a direct fetch. DCM status speaks to element (B). Kalshi Klear's statement that event contracts are fully collateralized and not traded on margin (F21, F43) bears on element (A). Neither is an IRS determination."
+    },
+    {
+      "id": "F46",
+      "status": "settled",
+      "topic": "section-1256",
+      "source_id": "irc-1256",
+      "claim": "The 60/40 rule in section 1256(a)(3) does not apply to gain or loss that would otherwise be ordinary income or loss.",
+      "quote": "Paragraph (3) of subsection (a) shall not apply to any gain or loss which, but for such paragraph, would be ordinary income or loss.",
+      "why_it_matters": "Section 1256 does not convert ordinary income into capital gain. If the contract profit is ordinary or wagering income in character, the 60/40 split is unavailable even for a section 1256 contract. The calculator's section 1256 scenario assumes capital character."
+    },
+    {
+      "id": "F47",
+      "status": "settled",
+      "topic": "capital",
+      "source_id": "irc-1",
+      "claim": "When a taxpayer has net capital gain, section 1(h)(1) computes ordinary tax on taxable income reduced by the net capital gain, then taxes the adjusted net capital gain at 0 percent to the extent it fits below the zero-rate breakpoint, 15 percent up to the 15-percent breakpoint, and 20 percent above it. The ordinary income is counted first.",
+      "quote": "the tax imposed by this section for such taxable year shall not exceed the sum of— (A) a tax computed at the rates and in the same manner as if this subsection had not been enacted on the greater of— (i) taxable income reduced by the net capital gain; or (ii) the lesser of— (I) the amount of taxable income taxed at a rate below 25 percent; or (II) taxable income reduced by the adjusted net capital gain; (B) 0 percent of so much of the adjusted net capital gain (or, if less, taxable income) as does not exceed the excess (if any) of— (i) the amount of taxable income which would (without regard to this paragraph) be taxed at a rate below 25 percent, over (ii) the taxable income reduced by the adjusted net capital gain; (C) 15 percent of the lesser of— (i) so much of the adjusted net capital gain (or, if less, taxable income) as exceeds the amount on which a tax is determined under subparagraph (B), or (ii) the excess of— (I) the amount of taxable income which would (without regard to this paragraph) be taxed at a rate below 39.6 percent, over (II) the sum of the amounts on which a tax is determined under subparagraphs (A) and (B), (D) 20 percent of the adjusted net capital gain … [excerpt; subparagraph (D) continues with the \"in excess of\" clause]",
+      "why_it_matters": "This is the stacking rule the calculator uses for the long-term and section 1256 scenarios: the 40 percent short-term slice (or other ordinary income) is taxed first under the ordinary table, and the long-term slice is stacked on top against the 2026 breakpoints. Without this rule a 60/40 illustration would be arithmetic, not law."
+    },
+    {
+      "id": "F48",
+      "status": "settled",
+      "topic": "capital",
+      "source_id": "irc-1",
+      "claim": "For taxable years after 2017, section 1(j)(5) replaces the '25 percent' and '39.6 percent' references in section 1(h)(1) with a maximum zero rate amount and a maximum 15-percent rate amount, indexed for inflation.",
+      "quote": "Section 1(h)(1) shall be applied— (i) by substituting “below the maximum zero rate amount” for “which would (without regard to this paragraph) be taxed at a rate below 25 percent” in subparagraph (B)(i), and (ii) by substituting “below the maximum 15-percent rate amount” for “which would (without regard to this paragraph) be taxed at a rate below 39.6 percent” in subparagraph (C)(ii)(I).",
+      "why_it_matters": "The 2026 dollar amounts for those breakpoints are the $49,450 and $545,500 figures for 'All Other Individuals' in Revenue Procedure 2025-32 section 4.03 (F15). The calculator reads the breakpoints from that revenue procedure, not from a blog table."
+    },
+    {
+      "id": "F49",
+      "status": "flag",
+      "topic": "calculator",
+      "source_id": "ftb-rates-2025",
+      "claim": "FTB's 2025 rate schedule PDF says the rate schedules are for taxable income over $100,000; at or below $100,000 the filer uses the Tax Table. The calculator applies the Schedule X formula at every step, so rows at or below $100,000 can differ from the Tax Table by a small rounding amount.",
+      "quote": "Use only if your taxable income on Form 540, line 19 is more than $100,000. If $100,000 or less, use the Tax Table.",
+      "why_it_matters": "The Schedule X formula is the arithmetic the Tax Table is built from, so the difference is rounding, not a different rate. The page states this so a reader who compares a row against the Tax Table is not surprised. The California Tax Table itself was not line-read in this pass."
+    },
+    {
+      "id": "F50",
+      "status": "open",
+      "topic": "character",
+      "source_id": "research-note-2026-09-24",
+      "claim": "A dated search of irs.gov on 24 September 2026 for 'event contracts' and 'prediction market' returned no revenue ruling, notice, procedure, or FAQ addressing event contracts. The hits were an unrelated 2015 Chief Counsel memorandum on section 1258, a 2022 bulletin on LIBOR transition, and a 2000 letter ruling on hedging futures.",
+      "quote": "Research note, not an IRS sentence: the 24 September 2026 site-restricted search of irs.gov for the phrases 'event contracts' and 'prediction market' returned documents 201501012, IRB 2022-03, and 0017011, none of which names event contracts or prediction markets. A negative search is a dated observation, not a ruling that no guidance exists.",
+      "why_it_matters": "The method page asked for this search to be recorded as a dated negative, not a conclusion. F03 stays open. Repeat the search each session and append the feed."
     }
   ]
 }
